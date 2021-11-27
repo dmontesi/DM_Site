@@ -1,0 +1,111 @@
+.header {
+  width: 100vw;
+  min-height: 100%;
+  height: 95vh;
+  position: relative;
+
+  &:before {
+    content: "";
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 36%,
+      rgba(0, 0, 0, 0.65) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 36%,
+      rgba(0, 0, 0, 0.65) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 36%,
+      rgba(0, 0, 0, 0.65) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr='#00000000',
+          endColorstr='#a6000000',
+          GradientType=1
+        ); /* IE6-9 fallback on horizontal gradient */
+    opacity: 0.6;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+  }
+
+  &.-small {
+    height: 300px;
+
+    .bk-img {
+      height: 300px;
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 110rem;
+    z-index: 20;
+
+    @include responsive(tab-port) {
+      width: 75rem;
+    }
+
+    @include responsive(phone) {
+      top: 60%;
+      width: 35rem;
+    }
+  }
+}
+
+.header-img1 {
+  @include header("~assets/images/hero.jpg");
+}
+
+.header-img2 {
+  @include header("~assets/images/XT3S5465_1.jpg");
+}
+
+.header-img3 {
+  @include header("~assets/images/XT3S5462.jpg");
+}
+
+.bk-enter-active,
+.bk-leave-active {
+  transition: all 0.4s ease;
+}
+
+.bk-enter,
+.bk-leave-to {
+  transform: scale(1.1) translateZ(0);
+  opacity: 0;
+}
+
+.bk-img {
+  position: absolute;
+  width: 100vw;
+  height: 95vh;
+  overflow: hidden;
+  top: 0;
+}

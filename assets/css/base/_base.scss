@@ -1,0 +1,46 @@
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; // 1rem = 10px/16px = 62.5% (0.625)
+	scroll-behavior: smooth;
+}
+
+body {
+	box-sizing: border-box;
+	// border-top:3rem solid $color-white;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	vertical-align: middle; // removes the whitespace that appears under `img`
+}
+
+section {
+    padding: 15rem 0;
+    width: $grid-width;
+    margin: 0 auto;
+
+    @include responsive(tab-port) {
+        padding: 10rem 0 5rem;
+        width: 75rem;
+    }
+
+    @include responsive(phone) {
+        padding: 10rem 0 2rem;
+        width: 35rem;
+    }
+    
+}
+
+::selection {
+	background-color: $color-primary;
+	color: $color-white;
+}
