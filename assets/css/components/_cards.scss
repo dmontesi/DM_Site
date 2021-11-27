@@ -1,0 +1,77 @@
+.cards {
+	> * + * {
+		margin-top: 2rem;
+	}
+
+	&__header {
+		max-width: 80ch;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+
+		> * {
+			flex-basis: 100%;
+		}
+
+		@include responsive(tab-port) {
+			flex-direction: column;
+			font-size: 1.7rem;
+			max-width: 75rem;
+			margin: 0 auto;
+			padding: 2rem 0 0;
+		}
+
+		@include responsive(phone) {
+			flex-wrap: wrap;
+			font-size: 1.5rem;
+		}
+
+		&--img {
+			max-width: 100%;
+			height: 35rem;
+
+			@include responsive(tab-port) {
+				height: 55rem;
+			}
+
+			@include responsive(phone) {
+				height: 25rem;
+			}
+		}
+
+		&__icon {
+			height: 33rem;
+			width: 33rem;
+			fill: $color-primary;
+			margin: 2rem;
+			text-align: center;
+			border-radius: 50%;
+			padding: 2rem;
+
+			@include responsive(tab-port) {
+				margin-bottom: 0;
+			}
+		}
+
+		&__text {
+			margin: 5rem;
+		}
+
+		&__description {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__imgbox {
+		background-color: $color-gray-light-3;
+		height: 100%;
+		width: 50%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

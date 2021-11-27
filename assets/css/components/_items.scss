@@ -1,0 +1,14 @@
+.items {
+    &__list {
+        list-style-type: none;
+        margin: 2.5rem 0;
+        display: grid;
+        row-gap: .25rem;
+    }
+
+    li {
+        span {
+            font-weight: 500;
+        }
+    }
+}
