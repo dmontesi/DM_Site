@@ -15,9 +15,6 @@
           </p>
 
           <app-items />
-          <!-- <NuxtLink to="/work" class="btn btn--dark-2 btn--space">
-            View Work
-          </NuxtLink> -->
         </div>
         <div class="col-1-of-3 composition">
           <div class="composition__box fade-box">
