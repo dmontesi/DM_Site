@@ -19,91 +19,42 @@
       </picture>
 
       <div class="card__content">
+        <p v-if="card.category" class="category small">
+          {{ card.category }}
+        </p>
         <h3 class="heading-tertiary u-margin-bottom-tiny">
           {{ card.title }}
         </h3>
         <p class="paragraph">
           {{ card.description }}
         </p>
+        <!-- <ul v-if="card.labels">
+          <li v-for="label in labels" :key="label.length">
+            {{ label.length }}
+          </li>
+        </ul> -->
       </div>
       <a
-        href="/websites"
+        href="/work"
         rel="noreferrer"
         class="card__cta text-link"
-      >View Samples →</a>
+      ><span v-if="card.year" class="card__year">{{ card.year }} |</span> {{ card.cta }}</a>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data () {
-    return {
-      cards: [
-        {
-          title: 'Front End Development',
-          description:
-            'Offering highly responsive, mobile friendly sites that look up to date with the latest trends.',
-          image: 'web-small',
-          imageLg: 'web',
-          alt: 'Coding Website',
-          url: '/websites',
-          featured: true
-        },
-        {
-          title: 'Graphic Design',
-          description:
-            'From high end brochures to band album covers. Printing available through third party',
-          alt: 'CD Cover',
-          image: 'lboe-small',
-          imageLg: 'lboe',
-          url: '/graphics',
-          featured: true
-        },
-        {
-          title: 'Wilson Group',
-          description:
-            'From high end brochures to band album covers. Printing available through third party',
-          alt: 'CD Cover',
-          image: 'lboe-small',
-          imageLg: 'lboe',
-          url: '/graphics',
-          featured: false
-        },
-        {
-          title: 'Cedar Place',
-          description:
-            'From high end brochures to band album covers. Printing available through third party',
-          alt: 'CD Cover',
-          image: 'lboe-small',
-          imageLg: 'lboe',
-          url: '/graphics',
-          featured: false
-        },
-        {
-          title: 'Wilson Group',
-          description:
-            'From high end brochures to band album covers. Printing available through third party',
-          alt: 'CD Cover',
-          image: 'lboe-small',
-          imageLg: 'lboe',
-          url: '/graphics',
-          featured: false
-        },
-        {
-          title: 'Cedar Place',
-          description:
-            'From high end brochures to band album covers. Printing available through third party',
-          alt: 'CD Cover',
-          image: 'lboe-small',
-          imageLg: 'lboe',
-          url: '/graphics',
-          featured: false
-        }
-      ]
-    }
+  // props: {
+  //   isFeatured: Boolean
+  // },
+  computed: {
+    ...mapState(['cards'])
   }
 }
+
 </script>
 
 <style></style>
