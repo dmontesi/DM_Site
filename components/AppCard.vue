@@ -25,12 +25,12 @@
         <p class="paragraph">
           {{ card.description }}
         </p>
-        <a
-          href="/websites"
-          rel="noreferrer"
-          class="card__cta text-link"
-        >View Samples →</a>
       </div>
+      <a
+        href="/websites"
+        rel="noreferrer"
+        class="card__cta text-link"
+      >View Samples →</a>
     </div>
   </div>
 </template>
