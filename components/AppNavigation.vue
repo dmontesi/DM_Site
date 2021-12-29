@@ -1,13 +1,7 @@
 <template>
   <div id="navbar" class="navigation">
     <picture id="navbar_logo" class="navigation__logo-box">
-      <source
-        srcset="~/assets/images/logo.png 1x, ~/assets/images/logo.png 2x"
-        media="(max-width: 75em)"
-        class="navigation__logo"
-      >
       <img
-        srcset="~/assets/images/logo.png 1x, ~/assets/images/logo.png 2x"
         alt="Logo"
         src="~/assets/images/logo.png"
         class="navigation__logo"

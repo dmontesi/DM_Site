@@ -19,7 +19,21 @@
         <div class="col-1-of-3 composition">
           <div class="composition__box fade-box">
             <picture>
+              <!-- <source
+          :data-srcset="require(`~/assets/images/${card.imageLg}.webp`)"
+          media="(min-width:900px)"
+          type="image/webp"
+        > -->
               <source
+                :data-srcset="require(`~/assets/images/${imageLg}.jpg`)"
+                media="(min-width:900px)"
+                type="image/jpg"
+              >
+              <img
+                :data-src="require(`~/assets/images/${image}.jpg`)"
+                class="lazyload"
+              >
+              <!-- <source
                 data-srcset="~/assets/images/WebP/dan-small.webp 1x, ~/assets/images/WebP/dan.webp 2x"
                 type="image/webp"
               >
@@ -32,7 +46,7 @@
                 alt="Logo"
                 src="~/assets/images/dan-small.jpg"
                 class="lazyload"
-              >
+              > -->
             </picture>
           </div>
         </div>
@@ -68,8 +82,14 @@ export default {
     AppCard,
     AppItems
   },
+  data () {
+    return {
+      image: 'dan-small',
+      imageLg: 'dan'
+    }
+  },
   computed: {
-    ...mapState(['page'])
+    ...mapState(['page, about'])
   }
 }
 </script>

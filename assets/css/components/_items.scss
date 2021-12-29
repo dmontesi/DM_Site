@@ -6,9 +6,8 @@
         row-gap: .25rem;
     }
 
-    li {
-        span {
-            font-weight: 500;
-        }
+    &__item {
+        display: flex;
+        gap: 1rem;
     }
 }

@@ -17,7 +17,8 @@ body {
 	// border-top:3rem solid $color-white;
 }
 
-img {
+img,
+picture {
 	display: block;
 	max-width: 100%;
 	vertical-align: middle; // removes the whitespace that appears under `img`
@@ -25,17 +26,17 @@ img {
 
 section {
     padding: 15rem 0;
-    width: $grid-width;
+    max-width: $grid-width;
     margin: 0 auto;
 
     @include responsive(tab-port) {
         padding: 10rem 0 5rem;
-        width: 75rem;
+        max-width: 75rem;
     }
 
     @include responsive(phone) {
         padding: 10rem 0 2rem;
-        width: 35rem;
+        max-width: 45rem;
     }
     
 }

@@ -4,8 +4,8 @@
       Some of the technologies I most commonly use:
     </h3>
     <ul class="items__list">
-      <li v-for="item in technologies" :key="item.index">
-        <strong class="bold">{{ item.title }}</strong> {{ item.technology }}
+      <li v-for="item in technologies" :key="item.title" class="items__item">
+        <strong class="bold">{{ item.title }}</strong> <span>{{ item.technology }}</span>
       </li>
     </ul>
   </div>

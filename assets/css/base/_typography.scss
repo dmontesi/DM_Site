@@ -170,7 +170,7 @@ body {
 	}
 
 	@include responsive(tab-port) {
-		font-size: 2.5rem;
+		font-size: 1.8rem;
 	}
 
 	@include responsive(phone) {
@@ -215,6 +215,10 @@ body {
 .bold {
 	font-size: $default-font-size;
 	font-weight: 600;
+}
+
+.italic {
+	font-style: italic;
 }
 
 .small {

@@ -1,24 +1,23 @@
 <template>
-  <div class="cards__wrapper">
+  <div class="cards__grid">
     <div v-for="card in cards" :key="card.title" class="card">
-      <div class="card__img">
-        <picture>
-          <source
-            data-srcset="~/assets/images/WebP/web-small.webp 1x, ~/assets/images/WebP/web.webp 2x"
-            type="image/webp"
-          >
-          <source
-            data-srcset="~/assets/images/web-small.jpg 1x, ~/assets/images/web.jpg 2x"
-            type="image/jpg"
-          >
-          <img
-            data-srcset="~/assets/images/web-small.jpg 1x, ~/assets/images/web.jpg 2x"
-            alt="Logo"
-            src="~/assets/images/web-small.jpg"
-            class="lazyload"
-          >
-        </picture>
-      </div>
+      <picture>
+        <!-- <source
+          :data-srcset="require(`~/assets/images/${card.imageLg}.webp`)"
+          media="(min-width:56.25em)"
+          type="image/webp"
+        > -->
+        <source
+          :data-srcset="require(`~/assets/images/${card.imageLg}.jpg`)"
+          media="(min-width:56.25em)"
+          type="image/jpg"
+        >
+        <img
+          :data-src="require(`~/assets/images/${card.image}.jpg`)"
+          class="card__img lazyload"
+        >
+      </picture>
+
       <div class="card__content">
         <h3 class="heading-tertiary u-margin-bottom-tiny">
           {{ card.title }}
@@ -27,7 +26,7 @@
           {{ card.description }}
         </p>
         <a
-          href="https://danmontesinos.myportfolio.com/websites"
+          href="/websites"
           rel="noreferrer"
           class="card__cta text-link"
         >View Samples →</a>
@@ -43,11 +42,63 @@ export default {
       cards: [
         {
           title: 'Front End Development',
-          description: 'Offering highly responsive, mobile friendly sites that look up to date with the latest trends.'
+          description:
+            'Offering highly responsive, mobile friendly sites that look up to date with the latest trends.',
+          image: 'web-small',
+          imageLg: 'web',
+          alt: 'Coding Website',
+          url: '/websites',
+          featured: true
         },
         {
           title: 'Graphic Design',
-          description: 'From high end brochures to band album covers. Printing available through third party'
+          description:
+            'From high end brochures to band album covers. Printing available through third party',
+          alt: 'CD Cover',
+          image: 'lboe-small',
+          imageLg: 'lboe',
+          url: '/graphics',
+          featured: true
+        },
+        {
+          title: 'Wilson Group',
+          description:
+            'From high end brochures to band album covers. Printing available through third party',
+          alt: 'CD Cover',
+          image: 'lboe-small',
+          imageLg: 'lboe',
+          url: '/graphics',
+          featured: false
+        },
+        {
+          title: 'Cedar Place',
+          description:
+            'From high end brochures to band album covers. Printing available through third party',
+          alt: 'CD Cover',
+          image: 'lboe-small',
+          imageLg: 'lboe',
+          url: '/graphics',
+          featured: false
+        },
+        {
+          title: 'Wilson Group',
+          description:
+            'From high end brochures to band album covers. Printing available through third party',
+          alt: 'CD Cover',
+          image: 'lboe-small',
+          imageLg: 'lboe',
+          url: '/graphics',
+          featured: false
+        },
+        {
+          title: 'Cedar Place',
+          description:
+            'From high end brochures to band album covers. Printing available through third party',
+          alt: 'CD Cover',
+          image: 'lboe-small',
+          imageLg: 'lboe',
+          url: '/graphics',
+          featured: false
         }
       ]
     }
@@ -55,6 +106,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
