@@ -26,7 +26,6 @@ picture {
 
 section {
     padding: 15rem 0;
-    max-width: $grid-width;
     margin: 0 auto;
 
     @include responsive(tab-port) {

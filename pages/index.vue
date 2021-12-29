@@ -33,20 +33,6 @@
                 :data-src="require(`~/assets/images/${image}.jpg`)"
                 class="lazyload"
               >
-              <!-- <source
-                data-srcset="~/assets/images/WebP/dan-small.webp 1x, ~/assets/images/WebP/dan.webp 2x"
-                type="image/webp"
-              >
-              <source
-                data-srcset="~/assets/images/dan-small.jpg 1x, ~/assets/images/dan.jpg 2x"
-                type="image/jpg"
-              >
-              <img
-                data-srcset="~/assets/images/dan-small.jpg 1x, ~/assets/images/dan.jpg 2x"
-                alt="Logo"
-                src="~/assets/images/dan-small.jpg"
-                class="lazyload"
-              > -->
             </picture>
           </div>
         </div>

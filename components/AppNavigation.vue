@@ -41,23 +41,18 @@
 
     <nav class="navigation__nav">
       <ul class="navigation__nav-primary u-center-text">
-        <NuxtLink exact to="/">
-          <li class="navigation__item">
+        <NuxtLink to="/">
+          <li class="navigation__toggle-item">
             Home
           </li>
         </NuxtLink>
-        <NuxtLink to="/websites">
-          <li class="navigation__item">
-            Websites
-          </li>
-        </NuxtLink>
-        <NuxtLink to="/graphics">
-          <li class="navigation__item">
-            Graphics
+        <NuxtLink to="/work">
+          <li class="navigation__toggle-item">
+            Work
           </li>
         </NuxtLink>
         <NuxtLink to="/contact">
-          <li class="navigation__item">
+          <li class="navigation__toggle-item">
             Contact
           </li>
         </NuxtLink>

@@ -3,14 +3,13 @@
     class="header"
     :class="{
       'index' : (page === 'index'),
-      '-small' : (page === 'websites' || page === 'graphics' || page === 'contact'),
+      '-small' : (page === 'work' || page === 'graphics' || page === 'contact'),
     }"
   >
     <transition-group name="bk" tag="div" class="bk-img">
       <div v-if="page === 'index'" key="img1" class="header-img1" />
-      <div v-else-if="page === 'websites'" key="img2" class="header-img2" />
-      <div v-else-if="page === 'graphics'" key="img2" class="header-img3" />
-      <div v-else key="img3" class="header-img2" />
+      <div v-else-if="page === 'work'" key="img2" class="header-img2" />
+      <div v-else key="img3" class="header-img3" />
     </transition-group>
 
     <div class="header__text-box">

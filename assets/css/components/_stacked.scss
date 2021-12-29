@@ -1,8 +1,13 @@
 .stacked {
+    align-items: center;
     display: grid;
 
     > * {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
+
+    .card__content {
+		align-self: end;
+	}
 }

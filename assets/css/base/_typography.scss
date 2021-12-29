@@ -222,8 +222,10 @@ body {
 }
 
 .small {
+	font-size: 1.25rem;
+	
 	@include responsive(phone) {
-		font-size: 3.5rem;
+		font-size: 1.35rem;
 	}
 }
 
