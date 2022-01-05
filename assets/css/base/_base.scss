@@ -1,46 +1,50 @@
-
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-	font-size: 62.5%; // 1rem = 10px/16px = 62.5% (0.625)
-	scroll-behavior: smooth;
+  font-size: 62.5%; // 1rem = 10px/16px = 62.5% (0.625)
+  scroll-behavior: smooth;
 }
 
 body {
-	box-sizing: border-box;
-	// border-top:3rem solid $color-white;
+  box-sizing: border-box;
+  // border-top:3rem solid $color-white;
 }
 
 img,
 picture {
-	display: block;
-	max-width: 100%;
-	vertical-align: middle; // removes the whitespace that appears under `img`
+  display: block;
+  max-width: 100%;
+  vertical-align: middle; // removes the whitespace that appears under `img`
 }
 
 section {
-    padding: 15rem 0;
-    margin: 0 auto;
+  padding: 15rem 0;
+  margin: 0 auto;
 
-    @include responsive(tab-port) {
-        padding: 10rem 0 5rem;
-        max-width: 75rem;
-    }
+  @include responsive(tab-port) {
+    padding: 10rem 0 5rem;
+  }
 
-    @include responsive(phone) {
-        padding: 10rem 0 2rem;
-        max-width: 45rem;
-    }
-    
+  @include responsive(phone) {
+    padding: 10rem 0 2rem;
+  }
+
+  &.bg-dark {
+    background-color: $color-primary;
+  }
+
+  &.bg-light {
+    background-color: $color-gray-light-3;
+  }
 }
 
 ::selection {
-	background-color: $color-primary;
-	color: $color-white;
+  background-color: $color-primary;
+  color: $color-white;
 }

@@ -19,7 +19,7 @@
       </h1>
       <div v-if="page === 'index'">
         <NuxtLink to="/work" class="btn btn--light">
-          View Portfolio
+          View Work
         </NuxtLink>
       </div>
     </div>

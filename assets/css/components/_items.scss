@@ -1,13 +1,15 @@
 .items {
-    &__list {
-        list-style-type: none;
-        margin: 2.5rem 0;
-        display: grid;
-        row-gap: .25rem;
-    }
+  display: grid;
+  gap: 1rem;
 
-    &__item {
-        display: flex;
-        gap: 1rem;
-    }
+  &__list {
+    list-style-type: none;
+    display: grid;
+    row-gap: 0.25rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+  }
 }

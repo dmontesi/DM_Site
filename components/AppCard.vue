@@ -1,6 +1,6 @@
 <template>
   <div class="cards__grid">
-    <div v-for="card in cards" :key="card.title" class="card">
+    <div v-for="card in cards" :key="card.title" class="card bg-dark">
       <picture>
         <!-- <source
           :data-srcset="require(`~/assets/images/${card.imageLg}.webp`)"
@@ -35,23 +35,27 @@
         </ul> -->
       </div>
       <a
-        href="/work"
+        :href="card.url"
+        :target="card.target"
         rel="noreferrer"
         class="card__cta text-link"
-      ><span v-if="card.year" class="card__year">{{ card.year }} |</span> {{ card.cta }}</a>
+      ><span v-if="card.year" class="card__year">{{ card.year }} |</span> {{ card.cta }} <span v-if="card.external" class="card__icon"><ph-arrow-square-out :size="20" /></span></a>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
+import { PhArrowSquareOut } from 'phosphor-vue'
 
 export default {
-  // props: {
-  //   isFeatured: Boolean
-  // },
+  components: {
+    PhArrowSquareOut
+  },
+
   computed: {
-    ...mapState(['cards'])
+    ...mapState(['cards', 'selected']),
+    ...mapGetters(['filteredCards'])
   }
 }
 

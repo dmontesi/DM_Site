@@ -40,6 +40,9 @@
 	&__cta {
 		margin-top: auto;
 		padding-bottom: 2.5rem;
+		display: flex;
+		align-items: center;
+		gap: .5rem;
 
 		&::before {
 			content: '';
@@ -48,8 +51,9 @@
 		}
 	}
 
-	&__year {
-		font-style: italic;
+	&__icon {
+		display: flex;
+		padding-bottom: .125rem;
 	}
 
 	.category {

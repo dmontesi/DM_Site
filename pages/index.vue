@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section id="about" ref="index" class="section about">
+    <section id="about" ref="index" class="section about bg-light">
       <div class="row box fade-in">
         <div class="col-2-of-3">
           <h1 class="heading-secondary">
@@ -44,12 +44,15 @@
           <h2 class="heading-secondary">
             Some of my work
           </h2>
-          <!-- <div class="paragraph">
-            Offering modern, highly responsive and optimized front end
-            websites and graphics for any of your needs. From wireframe
-            designs to final production.
-          </div> -->
         </div>
+        <select v-model="selected">
+          <option disabled value="">
+            Filter by category
+          </option>
+          <option v-for="category in categories" :key="category">
+            {{ category }}
+          </option>
+        </select>
         <div class="cards">
           <app-card />
         </div>
@@ -59,7 +62,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import AppItems from '~/components/AppItems'
 import AppCard from '~/components/AppCard'
 
@@ -75,7 +78,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(['page, about'])
+    ...mapState(['page, about', 'cards', 'categories', 'selected']),
+    ...mapGetters(['filteredCards'])
   }
 }
 </script>

@@ -9,6 +9,7 @@ export const state = () => ({
     { title: 'Repos:', technology: 'GitHub, GitLab, Pantheon' },
     { title: 'Other:', technology: 'Adobe Creative Suite, Adobe XD, Adobe Lightroom, Zeplin, Affinity Studio, Ableton Live' }
   ],
+  selected: '',
   categories: ['website', 'graphic design', 'ux-design'],
   cards: [
     {
@@ -41,7 +42,9 @@ export const state = () => ({
       image: 'wilson-small',
       imageLg: 'wilson',
       url: 'https://wilsongrouppm.com/',
-      cta: 'Visit Website →',
+      target: '_blank',
+      external: true,
+      cta: 'Visit Website',
       year: 2019,
       category: 'website',
       labels: ['html', 'scss'],
@@ -55,7 +58,9 @@ export const state = () => ({
       image: 'cedar-small',
       imageLg: 'cedar',
       url: 'https://cedar-place.web.app/',
-      cta: 'Visit Website →',
+      external: true,
+      target: '_blank',
+      cta: 'Visit Website',
       year: 2019,
       category: 'website',
       labels: ['html', 'scss', 'javascript'],
@@ -69,7 +74,9 @@ export const state = () => ({
       image: 'infocus',
       imageLg: 'infocus',
       url: 'https://infocusremarketing.com/',
-      cta: 'Visit Website →',
+      external: true,
+      target: '_blank',
+      cta: 'Visit Website',
       year: 2020,
       category: 'website',
       labels: ['html', 'scss', 'js'],
@@ -137,5 +144,12 @@ export const state = () => ({
 export const mutations = {
   updatePage (state, pageName) {
     state.page = pageName
+  }
+}
+
+export const getters = {
+  filteredCards (state) {
+    const filter = new RegExp(state.selected, 'i')
+    return state.cards.filter(el => el.category.match(filter))
   }
 }
