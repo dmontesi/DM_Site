@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="row">
+    <div class="grid">
       <div class="footer__logo-box">
         <img
           class="footer__logo"
@@ -10,8 +10,8 @@
       </div>
     </div>
 
-    <div class="row footer__items">
-      <div class="col-1-of-2">
+    <div class="grid footer__items">
+      <div class="col-3">
         <div class="footer__navigation">
           <ul class="footer__list">
             <li class="footer__item">
@@ -29,9 +29,9 @@
           </ul>
         </div>
       </div>
-      <div class="col-1-of-2">
-        <!-- <div class="footer__column social">
-          <a
+      <div class="col-3">
+        <div class="footer__column social">
+          <!-- <a
             href="https://github.com/dmontesi"
             target="_blank"
           ><i class="fab fa-github-alt"></i
@@ -46,18 +46,35 @@
             target="_blank"
           ><i class="fab fa-linkedin-in"></i
           ></a> -->
-        </div>
-        <p class="footer__copyright">
-          2021 &copy; Dan Montesinos. All Rights Reserved. Site development by
           <a
-            href="http://danmontesinos.com/"
+            href="https://github.com/dmontesi"
             target="_blank"
-            class="footer__link"
-          >Dan Montesinos.</a
-          >
-        </p>
+          ><ph-github-logo :size="28" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daniel-montesinos"
+            target="_blank"
+            class=""
+          ><ph-linkedin-logo :size="28" />
+          </a>
+        </div>
       </div>
+      <p class="footer__copyright col-1">
+        2021 &copy; Dan Montesinos. All Rights Reserved. Site development by
+        <a
+          href="http://danmontesinos.com/"
+          target="_blank"
+          class="footer__link"
+        >Dan Montesinos.</a>
+      </p>
     </div>
   </footer>
-
 </template>
+
+<script>
+import { PhLinkedinLogo, PhGithubLogo } from 'phosphor-vue'
+
+export default {
+  components: { PhLinkedinLogo, PhGithubLogo }
+}
+</script>

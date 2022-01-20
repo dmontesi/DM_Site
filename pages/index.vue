@@ -1,29 +1,30 @@
 <template>
   <main>
-    <section id="about" ref="index" class="section about bg-light">
-      <div class="row box fade-in">
-        <div class="col-2-of-3">
+    <section id="about" ref="index" class="section text-image bg-light">
+      <div class="grid box fade-in">
+        <div class="text-image__header col-4">
           <h1 class="heading-secondary">
             Glad you found me
           </h1>
           <p class="paragraph u-margin-bottom-med">
-            I began my career over a decade ago as a Graphic Designer in my
-            home country, Venezuela. Later on, I expanded my passion for clean
-            and minimal design to the digital world of web development. Outside of work, I enjoy spending
-            time in nature, traveling, recording music at home, photographing,
-            hiking, and sharing time with my wife, kids and cats.
+            I began my career over a decade ago as a Graphic Designer in my home
+            country, Venezuela. Later on, I expanded my passion for clean and
+            minimal design to the digital world of web development. Outside of
+            work, I enjoy spending time in nature, traveling, recording music at
+            home, photographing, hiking, and sharing time with my wife, kids and
+            cats.
           </p>
 
           <app-items />
         </div>
-        <div class="col-1-of-3 composition">
+        <div class="col-2 composition">
           <div class="composition__box fade-box">
             <picture>
               <!-- <source
           :data-srcset="require(`~/assets/images/${card.imageLg}.webp`)"
           media="(min-width:900px)"
           type="image/webp"
-        > -->
+              >-->
               <source
                 :data-srcset="require(`~/assets/images/${imageLg}.jpg`)"
                 media="(min-width:900px)"
@@ -38,15 +39,15 @@
         </div>
       </div>
     </section>
-    <section class="services">
-      <div class="row">
-        <div class="services__header">
+    <section class="section work">
+      <div class="grid">
+        <div class="work__header">
           <h2 class="heading-secondary">
             Some of my work
           </h2>
         </div>
-        <select v-model="selected">
-          <option disabled value="">
+        <select v-model="selected" class="work__list list">
+          <option disabled value>
             Filter by category
           </option>
           <option v-for="category in categories" :key="category">
