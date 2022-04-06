@@ -31,12 +31,17 @@
                 Home
               </li>
             </NuxtLink>
-            <NuxtLink to="/work">
+            <NuxtLink to="#about">
+              <li class="footer__item">
+                About
+              </li>
+            </NuxtLink>
+            <NuxtLink to="#work">
               <li class="footer__item">
                 Work
               </li>
             </NuxtLink>
-            <NuxtLink to="/contact">
+            <NuxtLink to="#contact">
               <li class="footer__item">
                 Contact
               </li>
@@ -66,7 +71,8 @@
         </div>
       </div>
       <p class="footer__copyright col-1">
-        2021 &copy; Dan Montesinos. All Rights Reserved. Site development by
+        ©{{ currentYear }} | Site
+        developed by
         <a
           href="http://danmontesinos.com/"
           target="_blank"
@@ -81,6 +87,11 @@
 import { PhLinkedinLogo, PhGithubLogo, PhBehanceLogo } from 'phosphor-vue'
 
 export default {
-  components: { PhLinkedinLogo, PhGithubLogo, PhBehanceLogo }
+  components: { PhLinkedinLogo, PhGithubLogo, PhBehanceLogo },
+  data () {
+    return {
+      currentYear: new Date().getFullYear()
+    }
+  }
 }
 </script>
