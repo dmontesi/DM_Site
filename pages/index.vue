@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section id="about" ref="index" class="section text-image bg-light">
+    <section id="about" ref="index" class="section text-image">
       <div class="grid box fade-in">
         <div class="text-image__header col-4">
           <h1 class="heading-secondary">
@@ -42,7 +42,7 @@
         </div>
       </div>
     </section>
-    <section class="section work">
+    <section id="work" class="section work bg-light">
       <div class="work__grid">
         <app-card />
       </div>
