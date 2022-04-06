@@ -2,7 +2,7 @@
   <div class="grid">
     <div class="work__header">
       <h2 class="heading-secondary">
-        Some of my work
+        Featured Work
       </h2>
     </div>
 
@@ -50,8 +50,7 @@
             :target="post.target"
             rel="noreferrer"
             class="card__cta text-link"
-          ><span v-if="post.year" class="card__year">{{ post.year }} |</span>
-            {{ post.cta }}
+          >{{ post.cta }}
             <span
               v-if="post.external"
               class="card__icon"
