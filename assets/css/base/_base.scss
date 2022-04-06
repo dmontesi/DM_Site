@@ -24,15 +24,12 @@ picture {
 }
 
 section {
-  padding: 15rem 0;
   margin: 0 auto;
+  padding: 15rem 0;
+  position: relative;
 
   @include responsive(tab-port) {
-    padding: 10rem 0 5rem;
-  }
-
-  @include responsive(phone) {
-    padding: 10rem 0 2rem;
+    padding: 5rem 0;
   }
 
   &.bg-dark {

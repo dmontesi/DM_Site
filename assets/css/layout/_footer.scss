@@ -12,6 +12,27 @@
     padding: 4rem 0;
   }
 
+  a:link,
+  a:visited {
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: color 0.2s ease-out;
+    color: $color-gray-light-3;
+  }
+
+  a:hover,
+  a:active {
+    color: $color-secondary;
+    // border-bottom: 1px solid $color-primary;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
   &__logo-box {
     grid-column: 1 / -1;
 
@@ -50,6 +71,8 @@
   }
 
   &__list {
+    display: flex;
+    gap: calc($gutter / 2);
     list-style: none;
   }
 
@@ -58,29 +81,6 @@
 
     &:not(:last-child) {
       margin-right: 1.4rem;
-    }
-  }
-
-  &__link {
-    &:link,
-    &:visited {
-      font-weight: 300;
-      font-size: 1.4rem;
-      text-decoration: none;
-      text-transform: capitalize;
-      display: inline-block;
-      transition: all 0.4s;
-      color: $color-gray-light-3;
-    }
-
-    &:hover,
-    &:active {
-      color: $color-secondary;
-      // border-bottom: 1px solid $color-primary;
-
-      &::after {
-        width: 100%;
-      }
     }
   }
 
@@ -101,7 +101,10 @@
 
       svg {
         color: $color-white;
-        fill: $color-white;
+        transition: color 0.2s ease-out;
+      }
+      svg:hover {
+        color: $color-secondary;
       }
     }
   }

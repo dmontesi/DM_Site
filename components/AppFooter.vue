@@ -14,7 +14,7 @@
       <div class="col-3">
         <div class="footer__navigation">
           <ul class="footer__list">
-            <li class="footer__item">
+            <!-- <li class="footer__item">
               <a href="index.html" class="footer__link">Home</a>
             </li>
             <li class="footer__item">
@@ -25,32 +25,38 @@
             </li>
             <li class="footer__item">
               <a href="contact.html" class="footer__link">Contact</a>
-            </li>
+            </li> -->
+            <NuxtLink to="/">
+              <li class="footer__item">
+                Home
+              </li>
+            </NuxtLink>
+            <NuxtLink to="/work">
+              <li class="footer__item">
+                Work
+              </li>
+            </NuxtLink>
+            <NuxtLink to="/contact">
+              <li class="footer__item">
+                Contact
+              </li>
+            </NuxtLink>
           </ul>
         </div>
       </div>
       <div class="col-3">
         <div class="footer__column social">
-          <!-- <a
-            href="https://github.com/dmontesi"
-            target="_blank"
-          ><i class="fab fa-github-alt"></i
-          ></a>
-          <a
-            href="https://www.behance.net/dmontesinos"
-            target="_blank"
-          ><i class="fab fa-behance"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/daniel-montesinos"
-            target="_blank"
-          ><i class="fab fa-linkedin-in"></i
-          ></a> -->
           <a
             href="https://github.com/dmontesi"
             target="_blank"
           ><ph-github-logo :size="28" />
           </a>
+          <a
+            href="https://www.behance.net/dmontesinos"
+            target="_blank"
+          ><ph-behance-logo :size="28" />
+          </a>
+
           <a
             href="https://www.linkedin.com/in/daniel-montesinos"
             target="_blank"
@@ -64,7 +70,7 @@
         <a
           href="http://danmontesinos.com/"
           target="_blank"
-          class="footer__link"
+          class="link footer__link"
         >Dan Montesinos.</a>
       </p>
     </div>
@@ -72,9 +78,9 @@
 </template>
 
 <script>
-import { PhLinkedinLogo, PhGithubLogo } from 'phosphor-vue'
+import { PhLinkedinLogo, PhGithubLogo, PhBehanceLogo } from 'phosphor-vue'
 
 export default {
-  components: { PhLinkedinLogo, PhGithubLogo }
+  components: { PhLinkedinLogo, PhGithubLogo, PhBehanceLogo }
 }
 </script>

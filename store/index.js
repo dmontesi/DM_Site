@@ -9,9 +9,9 @@ export const state = () => ({
     { title: 'Repos:', technology: 'GitHub, GitLab, Pantheon' },
     { title: 'Other:', technology: 'Adobe Creative Suite, Adobe XD, Adobe Lightroom, Zeplin, Affinity Studio, Ableton Live' }
   ],
-  selected: '',
+  selected: 'Filter by category',
   categories: ['website', 'graphic design', 'ux-design'],
-  cards: [
+  posts: [
     {
       title: 'Front End Development',
       description:
@@ -21,6 +21,7 @@ export const state = () => ({
       alt: 'Coding Website',
       url: '/websites',
       cta: 'View Samples →',
+      label: 'website',
       featured: true
     },
     {
@@ -32,6 +33,7 @@ export const state = () => ({
       imageLg: 'lboe',
       url: '/graphic design',
       cta: 'View Samples →',
+      label: 'graphic design',
       featured: true
     },
     {
@@ -46,7 +48,7 @@ export const state = () => ({
       external: true,
       cta: 'Visit Website',
       year: 2019,
-      category: 'website',
+      label: 'website',
       labels: ['html', 'scss'],
       featured: false
     },
@@ -62,7 +64,7 @@ export const state = () => ({
       target: '_blank',
       cta: 'Visit Website',
       year: 2019,
-      category: 'website',
+      label: 'website',
       labels: ['html', 'scss', 'javascript'],
       featured: false
     },
@@ -78,7 +80,7 @@ export const state = () => ({
       target: '_blank',
       cta: 'Visit Website',
       year: 2020,
-      category: 'website',
+      label: 'website',
       labels: ['html', 'scss', 'js'],
       featured: false
     },
@@ -92,7 +94,7 @@ export const state = () => ({
       url: '/',
       cta: 'Visit Page →',
       year: 2019,
-      category: 'ux-design',
+      label: 'ux-design',
       labels: ['ux'],
       featured: false
     },
@@ -106,7 +108,7 @@ export const state = () => ({
       url: '/',
       cta: 'Visit Page →',
       year: 2014,
-      category: 'graphic design',
+      label: 'graphic design',
       labels: ['illustrator', 'photoshop'],
       featured: false
     },
@@ -120,7 +122,7 @@ export const state = () => ({
       url: '/',
       cta: 'Visit Page →',
       year: 2008,
-      category: 'graphic design',
+      label: 'graphic design',
       labels: ['illustrator', 'photoshop'],
       featured: false
     },
@@ -134,7 +136,7 @@ export const state = () => ({
       url: '/',
       cta: 'Visit Page →',
       year: 2008,
-      category: 'graphic design',
+      label: 'graphic design',
       labels: ['illustrator', 'photoshop'],
       featured: false
     }
@@ -148,8 +150,8 @@ export const mutations = {
 }
 
 export const getters = {
-  filteredCards (state) {
+  filteredLabel (state) {
     const filter = new RegExp(state.selected, 'i')
-    return state.cards.filter(el => el.category.match(filter))
+    return state.posts.filter(el => el.label.match(filter))
   }
 }

@@ -1,11 +1,12 @@
 <template>
   <div class="items">
-    <h3 class="heading-tertiary">
+    <p class="paragraph">
       Some of the technologies I most commonly use:
-    </h3>
+    </p>
     <ul class="items__list">
       <li v-for="item in technologies" :key="item.title" class="items__item">
-        <strong class="bold">{{ item.title }}</strong> <span>{{ item.technology }}</span>
+        <strong class="bold">{{ item.title }}</strong>
+        <span>{{ item.technology }}</span>
       </li>
     </ul>
   </div>
@@ -19,6 +20,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

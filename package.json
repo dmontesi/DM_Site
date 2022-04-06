@@ -28,5 +28,16 @@
     "nuxt-lazysizes": "^1.4.0",
     "sass": "^1.43.4",
     "sass-loader": "10"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-console": "off"
+    }
   }
 }
