@@ -73,6 +73,10 @@
     display: flex;
     gap: calc($gutter / 2);
     list-style: none;
+
+    @include responsive(tab-port) {
+      justify-content: center;
+    }
   }
 
   &__item {
