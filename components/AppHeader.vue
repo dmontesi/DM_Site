@@ -14,8 +14,8 @@
 
     <div class="header__text-box">
       <h1 class="heading-primary">
-        <span class="heading-primary--sub">Hola, I'm <span>Dan</span></span>
-        <span class="heading-primary--main u-margin-bottom-med u-padding-x">Front-End Developer</span>
+        <span class="heading-primary--sub">Hi, I'm <span>Dan</span></span>
+        <span class="heading-primary--main u-margin-bottom-med u-padding-x">Front-End Developer <br/>& Designer</span>
       </h1>
       <div v-if="page === 'index'">
         <NuxtLink to="/work" class="btn btn--light">
