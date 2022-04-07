@@ -6,7 +6,7 @@
       </h2>
     </div>
 
-    <select v-model="selected" class="work__list list">
+    <select v-model="selected" class="work__list list" aria-label="Select Work">
       <option disabled value="">
         Filter by Category
       </option>
@@ -50,6 +50,7 @@
             :target="post.target"
             rel="noreferrer"
             class="card__cta text-link"
+            aria-label="Visit link"
           >{{ post.cta }}
             <span
               v-if="post.external"

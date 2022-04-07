@@ -54,11 +54,13 @@
           <a
             href="https://github.com/dmontesi"
             target="_blank"
+            aria-label="View code on Github"
           ><ph-github-logo :size="28" />
           </a>
           <a
             href="https://www.behance.net/dmontesinos"
             target="_blank"
+            aria-label="View my work on Behance"
           ><ph-behance-logo :size="28" />
           </a>
 
@@ -66,6 +68,7 @@
             href="https://www.linkedin.com/in/daniel-montesinos"
             target="_blank"
             class=""
+            aria-label="View my profile on LinkedIn"
           ><ph-linkedin-logo :size="28" />
           </a>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <!-- <app-filter /> -->
-  <select v-model="selected" class="work__list list">
+  <select v-model="selected" class="work__list list" aria-label="Select work">
     <option disabled value="">
       Filter by Category
     </option>
