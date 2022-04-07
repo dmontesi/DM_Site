@@ -1,89 +1,149 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.6.10/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.6.10/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.6.10/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <title>Dan Montesinos</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="I began my career over a decade ago as a Graphic Designer in my home country, Venezuela. I've always had a passion for clean and minimal design. I spend my free time working on personal & freelance projects ranging from Web Development to Digital Marketing. My other passions are traveling, recording music, biking, kayaking, and spending time with my pets, and family."><meta data-n-head="ssr" name="format-detection" content="telephone=no"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap, https://use.typekit.net/rxz7cpd.css"><link rel="preload" href="/_nuxt/07185dc.js" as="script"><link rel="preload" href="/_nuxt/0fcd2cc.js" as="script"><link rel="preload" href="/_nuxt/6f37d76.js" as="script"><link rel="preload" href="/_nuxt/f62853f.js" as="script"><link rel="preload" href="/_nuxt/d266768.js" as="script"><style data-vue-ssr-id="f52d43e0:0 a07579c2:0 7e56e4e3:0">:root{--ff-default:1.7rem;--ff-small:1.5rem}@media only screen and (max-width:56.25em){:root{--ff-small:1.7rem}}@media only screen and (max-width:37.5em){:root{--ff-default:1.7rem}}.page-enter-active,.page-leave-active{transition:all .25s ease}.page-enter,.page-leave-active{opacity:0;transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}*,:after,:before{margin:0;padding:0;box-sizing:inherit}html{font-size:62.5%;scroll-behavior:smooth}body{box-sizing:border-box}img,picture{display:block;max-width:100%;vertical-align:middle}section{margin:0 auto;padding:15rem 0;position:relative}@media only screen and (max-width:56.25em){section{padding:5rem 0}}section.bg-dark{background-color:#212121}section.bg-light{background-color:#f0f0f0}section.contact .col-4{justify-items:start}::-moz-selection{background-color:#212121;color:#fff}::selection{background-color:#212121;color:#fff}body{font-family:Poppins,sans-serif;font-weight:300;line-height:1.7;font-size:1.7rem;font-size:var(--ff-default);color:#383838}@media only screen and (max-width:56.25em){body{line-height:1.6}}.heading-primary{color:#fff;-webkit-backface-visibility:hidden;backface-visibility:hidden;margin-bottom:2rem;padding:0 10rem}@media only screen and (max-width:56.25em){.heading-primary{padding:0 2rem}}.heading-primary--main{font-family:Poppins,sans-serif;display:block;font-size:4.8rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;line-height:1.15;-webkit-animation:reveal 1s ease-out .8s 1 normal both;animation:reveal 1s ease-out .8s 1 normal both}@media only screen and (max-width:56.25em){.heading-primary--main{line-height:1.15}}@media only screen and (max-width:37.5em){.heading-primary--main{font-size:5rem;line-height:1;letter-spacing:-.1rem}}.heading-primary--sub{display:block;font-size:3.2rem;font-weight:300;-webkit-animation:reveal .5s ease-out 0s 1 normal both;animation:reveal .5s ease-out 0s 1 normal both}@media only screen and (max-width:37.5em){.heading-primary--sub{font-size:1.9rem}}.heading-primary--sub span{border-bottom:1.5px solid #fff;font-style:italic}.heading-primary--body{font-family:Poppins,sans-serif;display:block;font-size:5.5rem;font-weight:600;line-height:1}@media only screen and (max-width:37.5em){.heading-primary--body{font-size:5rem}}.heading-primary-small{color:#fff;text-transform:uppercase;-webkit-backface-visibility:hidden;backface-visibility:hidden}.heading-primary-small--main{display:block;font-size:6.3rem;font-weight:700;letter-spacing:3.5rem;-webkit-animation-name:moveInLeft;animation-name:moveInLeft;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}@media only screen and (max-width:37.5em){.heading-primary-small--main{letter-spacing:1rem;font-size:5rem}}.heading-primary-small--sub{display:block;font-size:2rem;font-weight:700;letter-spacing:1.75rem;-webkit-animation-name:moveInRight;animation-name:moveInRight;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}.heading-secondary{font-family:"Source Sans Pro",sans-serif;font-size:4.8rem;font-weight:600;color:#383838;line-height:1.1}@media only screen and (max-width:56.25em){.heading-secondary{font-size:5rem}}@media only screen and (max-width:37.5em){.heading-secondary{font-size:3.5rem}}.heading-tertiary{font-family:Poppins,sans-serif;font-size:#4f4f4f;text-transform:capitalize;font-weight:600;font-size:1.8rem;line-height:1.2}.paragraph{font-size:1.7rem;font-size:var(--ff-default)}@media only screen and (max-width:56.25em){.paragraph{font-size:1.5rem}}@media only screen and (max-width:37.5em){.paragraph{font-size:1.4rem}}.highlight{font-size:1.7rem;font-size:var(--ff-default);font-weight:600;text-decoration:underline}.link:link,.link:visited{color:#212121;text-decoration:none;transition:all .4s;display:inline-block}.link:link:after,.link:visited:after{content:"";display:block;width:0;height:2px;background:#8c7242;transition:width .4s}.link:active,.link:hover{color:#8c7242}.link:active:after,.link:hover:after{width:100%}.bold{font-size:1.7rem;font-size:var(--ff-default);font-weight:600}.italic{font-style:italic}.underline{text-decoration:underline}.small{font-size:1.25rem}@media only screen and (max-width:37.5em){.small{font-size:1.35rem}}.subscript{font-size:1.2rem;color:red}i.fab,i.fas{font-size:2.1rem;padding-right:2rem;color:#bdbdbd;transition:all .2s ease-in}i.fab:hover,i.fas:hover{color:#4f4f4f;transform:translateY(-5px)}.btn:link,.btn:visited{text-transform:uppercase;text-decoration:none;padding:1.5rem 4rem;display:inline-block;letter-spacing:1px;transition:all .2s;position:relative;font-weight:300;font-size:1.5rem}.btn:hover{transform:translateY(-.5rem)}.btn:active,.btn:hover{box-shadow:0 .5rem 1em rgba(0,0,0,.2)}.btn:active{transform:translateY(-.1rem)}.btn--dark{background-color:#212121;color:#fff;font-size:inherit}.btn--dark:hover{background-color:#000}.btn--dark-2{background-color:#212121;color:#fff;font-size:inherit}.btn--dark-2:hover{background-color:#000}.btn--light{background-color:#fff;color:#212121;font-size:inherit}.btn--light:hover{background-color:#8c7242;color:#fff}.btn--light-2{background-color:#212121;color:#fff;font-size:inherit}.btn--light-2:hover{background-color:#000}.btn:after{content:"";display:inline-block;height:100%;width:100%;position:absolute;top:0;left:0;z-index:-1;transition:all .4s}.btn--animated{-webkit-animation:reveal 1s ease-out 2s 1 normal both;animation:reveal 1s ease-out 2s 1 normal both;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards}.btn--space{margin-right:2rem}.card{background-color:#fff;box-shadow:0 1px 1px rgba(0,0,0,.075),0 2px 2px rgba(0,0,0,.075),0 4px 4px rgba(0,0,0,.075),0 8px 8px rgba(0,0,0,.075),0 16px 16px rgba(0,0,0,.075);cursor:pointer;display:flex;flex-direction:column;grid-gap:2.5rem;gap:2.5rem;align-items:stretch;position:relative;transition:transform .2s ease-out}.card:hover{transform:translateY(-5px)}.card:hover .card__cta{color:#8c7242;transition:transform .2s ease-out,color .2s ease-out}.card__img{width:100%;aspect-ratio:5/4;-o-object-fit:cover;object-fit:cover}@media only screen and (max-width:37.5em){.card__img{aspect-ratio:1/1}}.card__content{background-color:#fff;display:grid;grid-gap:.5rem;gap:.5rem}.card__content .paragraph{margin-bottom:0}.card__content,.card__footer{padding-left:2.5rem;padding-right:2.5rem}.card__footer{display:flex;flex-flow:row-reverse;justify-content:space-between;align-items:flex-end;margin-top:auto;padding-bottom:2.5rem}.card__cta{display:flex;align-items:center;grid-gap:.5rem;gap:.5rem}.card__cta:before{content:"";position:absolute;top:0;right:0;bottom:0;left:0}.card__icon{display:flex;padding-bottom:.125rem}.card__labels{display:flex;grid-gap:1rem;gap:1rem;color:#8c7242;font-size:1.5rem;font-size:var(--ff-small);text-decoration:underline}.card .category{background:#212121;color:#fff;padding:.125rem .75rem;margin-bottom:.25rem;border-radius:3px;text-transform:uppercase;font-size:1.2rem;justify-self:start}.cards{grid-column:1/-1}.cards__grid{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:2rem;gap:2rem}@media only screen and (max-width:56.25em){.cards__grid{grid-template-columns:repeat(auto-fit,minmax(30rem,1fr))}}@media only screen and (max-width:37.5em){.cards__grid{font-size:1.5rem}}.cards__grid--img{max-width:100%;height:35rem}@media only screen and (max-width:56.25em){.cards__grid--img{height:55rem}}@media only screen and (max-width:37.5em){.cards__grid--img{height:25rem}}.cards__grid__icon{height:33rem;width:33rem;fill:#212121;margin:2rem;text-align:center;border-radius:50%;padding:2rem}@media only screen and (max-width:56.25em){.cards__grid__icon{margin-bottom:0}}.cards__grid__text{margin:5rem}.cards__grid__description{margin-bottom:3rem}.cards__imgbox{background-color:#f0f0f0;height:100%;width:50%;display:flex;justify-content:center;align-items:center}.composition img{border-radius:50%}.items{display:grid;grid-gap:1rem;gap:1rem}.items__list{list-style-type:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));grid-row-gap:.25rem;row-gap:.25rem}.items__item{display:flex;grid-gap:1rem;gap:1rem;color:#8c7242;font-size:1.5rem;font-size:var(--ff-small);text-align:center;text-decoration:underline}@media only screen and (max-width:37.5em){.items__item{--ff-small:1.3rem}}.items__item span{padding:0 1rem}.list{border:1px solid #bdbdbd;display:inline-block;line-height:1.5em;font-family:inherit;font-size:1.5rem;font-weight:300;letter-spacing:1px;padding:.5em 3.5em .5em 1em;position:relative;text-transform:uppercase;margin:0;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#171717 0),linear-gradient(135deg,#171717 50%,transparent 0),linear-gradient(90deg,#171717,#171717);background-position:calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px),calc(100% - 2.5em) .5em;background-size:5px 5px,5px 5px,1px 1.5em;background-repeat:no-repeat}.list:focus{outline:2px dotted #8c7242}.stacked{align-items:center;display:grid}.stacked>*{grid-column:1/2;grid-row:1/2}.stacked .card__content{align-self:end}.text-link{color:#212121;text-decoration:none;font-size:1.7rem;font-size:var(--ff-default)}@media only screen and (max-width:56.25em){.text-link{font-size:1.5rem}}@media only screen and (max-width:37.5em){.text-link{font-size:1.4rem}}.text-image__header{display:grid;grid-gap:2rem;gap:2rem}.work__header{grid-column:span 4}.work__list{align-self:center;grid-column:span 2}@media only screen and (max-width:37.5em){.work__header,.work__list{grid-column:1/-1}}.footer{background:#212121;padding:10rem 0;font-size:1.5rem;font-size:var(--ff-small);color:#bdbdbd}@media only screen and (max-width:56.25em){.footer{padding:8rem 0}}@media only screen and (max-width:37.5em){.footer{padding:4rem 0}}.footer a:link,.footer a:visited{font-weight:300;text-decoration:none;text-transform:capitalize;display:inline-block;transition:color .2s ease-out;color:#f0f0f0}.footer a:active,.footer a:hover{color:#8c7242}.footer a:active:after,.footer a:hover:after{width:100%}.footer__logo-box{grid-column:1/-1;text-align:center;padding-bottom:2rem;margin:0 auto}@media only screen and (max-width:56.25em){.footer__logo-box{margin-bottom:0}}@media only screen and (max-width:37.5em){.footer__logo-box{margin-bottom:2rem}}.footer__logo{width:25rem;height:auto;margin:0 auto}.footer__navigation{display:inline-block;padding-top:2rem}@media only screen and (max-width:56.25em){.footer__navigation{width:100%;text-align:center}}@media only screen and (max-width:37.5em){.footer__navigation{padding-top:0}}.footer__list{display:flex;grid-gap:2rem;gap:2rem;list-style:none}.footer__item{display:inline-block;text-transform:uppercase}.footer__item:not(:last-child){margin-right:1.4rem}.footer__column{display:inline-block}@media only screen and (max-width:56.25em){.footer__column{width:100%;float:none;text-align:center;line-height:.5rem}}.footer__column.social{display:flex;grid-gap:1rem;gap:1rem;justify-content:center}.footer__column.social svg{color:#fff;transition:color .2s ease-out}.footer__column.social svg:hover{color:#8c7242}.footer__copyright{display:inline-block;padding-top:2rem;text-align:center}.footer__copyright:not(:last-child){margin-bottom:1.4rem}@media only screen and (max-width:56.25em){.footer__copyright{width:100%;float:none;text-align:center}}.footer__items{display:flex;align-items:flex-end}@media only screen and (max-width:37.5em){.footer__items{flex-direction:column;align-items:flex-start}}.grid{display:grid;align-items:center;grid-gap:3.5rem;gap:3.5rem;grid-template-columns:repeat(6,1fr);max-width:114rem;margin:0 auto;padding:0 2rem}.grid .col-1{grid-column:1/-1}.grid .col-2{grid-column:span 2}@media only screen and (max-width:56.25em){.grid .col-2{grid-column:1/-1}}.grid .col-3{grid-column:span 3}@media only screen and (max-width:56.25em){.grid .col-3{grid-column:1/-1}}.grid .col-4{grid-column:span 4}@media only screen and (max-width:56.25em){.grid .col-4{grid-column:1/-1}}.header{width:100vw;min-height:100%;height:95vh;position:relative}.header:before{z-index:10;background:radial-gradient(ellipse at center,transparent 0,transparent 36%,rgba(0,0,0,.65) 100%);opacity:.6}.header:after,.header:before{content:"";position:absolute;top:0;right:0;bottom:0;left:0}.header:after{z-index:-1;background:#000}.header.-small,.header.-small .bk-img{height:300px}.header__text-box{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:110rem;z-index:20}@media only screen and (max-width:56.25em){.header__text-box{width:75rem}}@media only screen and (max-width:37.5em){.header__text-box{top:60%;width:35rem}}.header-img1{background-color:hsla(0,0%,9%,.4);background-image:url(/_nuxt/img/hero.cd8f364.jpg);background-size:cover;background-blend-mode:multiply;background-position:50%;background-repeat:no-repeat;position:absolute;width:100vw;height:95vh}.-small .header-img1{height:300px}.header-img2{background-color:hsla(0,0%,9%,.4);background-image:url(/_nuxt/img/XT3S5465_1.9e248fe.jpg);background-size:cover;background-blend-mode:multiply;background-position:50%;background-repeat:no-repeat;position:absolute;width:100vw;height:95vh}.-small .header-img2{height:300px}.header-img3{background-color:hsla(0,0%,9%,.4);background-image:url(/_nuxt/img/XT3S5462.634e5b1.jpg);background-size:cover;background-blend-mode:multiply;background-position:50%;background-repeat:no-repeat;position:absolute;width:100vw;height:95vh}.-small .header-img3{height:300px}.bk-enter-active,.bk-leave-active{transition:all .4s ease}.bk-enter,.bk-leave-to{transform:scale(1.1) translateZ(0);opacity:0}.bk-img{position:absolute;width:100vw;height:95vh;overflow:hidden;top:0}.navigation{background-color:#fff;-webkit-backdrop-filter:saturate(200%) blur(20px);backdrop-filter:saturate(200%) blur(20px);display:flex;align-items:center;position:relative}.navigation__nav{text-align:center}@media only screen and (hover:none),only screen and (max-width:56.25em){.navigation__nav{display:none}}.navigation__nav-primary{list-style:none;padding:0;margin-left:5rem;float:left;z-index:3}.navigation__nav-primary>.navigation__item{padding:0;margin:0;float:left;position:relative;cursor:pointer}.navigation__nav-primary .navigation__toggle-item{position:relative}.navigation__nav-primary .navigation__toggle-item:after{content:"";display:block;position:absolute;height:.125rem;right:auto;background:#8c7242;transform:scaleX(0);transition:transform .2s ease-out;width:100%}.navigation__nav-primary .navigation__toggle-item:hover{color:#8c7242}.navigation__nav-primary .navigation__toggle-item:hover:after{transform:scaleX(1);transition:transform .25s ease-in-out}.navigation__nav-primary a:link,.navigation__nav-primary a:visited{font-weight:400;padding:3rem 2.5rem;font-size:1.7rem;font-size:var(--ff-default);color:#1d2621;text-decoration:none;text-transform:uppercase;display:inline-block;transition:all .4s}.navigation__logo-box{height:6rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}@media only screen and (max-width:56.25em){.navigation__logo-box{background:#fff;height:7rem;width:100%;display:flex;align-items:center;justify-content:center;transform:translate(-50%)}}.navigation__logo{height:100%}@media only screen and (max-width:37.5em){.navigation__logo{height:5.9rem}}.navigation__toggle-box{display:none}@media only screen and (hover:none),only screen and (max-width:56.25em){.navigation__toggle-box{display:block}}.navigation__checkbox{display:none}.navigation__button{background-color:transparent;height:7rem;width:7rem;position:absolute;top:4.5rem;right:4.5rem;z-index:2000;text-align:center;cursor:pointer}@media only screen and (max-width:56.25em){.navigation__button{background-color:#fff;border-radius:50% 50%;top:3rem;right:3rem}}.navigation__background{height:6rem;width:6rem;border-radius:50%;position:fixed;top:5rem;right:5rem;background-image:radial-gradient(#212121,#171717);z-index:100;transition:transform .8s cubic-bezier(.23,1,.32,1);opacity:0}@media only screen and (max-width:56.25em){.navigation__background{top:4.5rem;right:4.5rem}}@media only screen and (max-width:37.5em){.navigation__background{top:3.5rem;right:3.5rem}}.navigation__checkbox:checked~.navigation__background{transform:scale(80);opacity:1}.navigation__checkbox:checked~.navigation__nav-toggle{opacity:1;width:100%}.navigation__icon{position:relative;margin-top:3.5rem;background-color:#212121}.navigation__icon,.navigation__icon:after,.navigation__icon:before{width:3rem;height:2px;background-color:#212121;display:inline-block}.navigation__icon:after,.navigation__icon:before{content:"";position:absolute;left:0;transition:all .2s}.navigation__icon:before{top:-.8rem}.navigation__icon:after{top:.8rem}.navigation__button:hover .navigation__icon:before{top:-1rem}.navigation__button:hover .navigation__icon:after{top:1rem}.navigation__nav-toggle{height:100vh;width:100%;position:fixed;top:0;left:0;z-index:150;opacity:0;width:0;transition:all .8s cubic-bezier(.23,1,.32,1)}.navigation__nav-toggle a:link,.navigation__nav-toggle a:visited{text-decoration:none}.navigation__nav-toggle .navigation__toggle-item{font-size:3rem;font-weight:300;color:#fff;text-decoration:none;text-transform:uppercase;padding:1rem 2rem;background-image:linear-gradient(90deg,transparent,transparent 50%,#fff 0);background-size:230%;transition:all .4s}.navigation__nav-toggle .navigation__toggle-list{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);list-style:none;text-align:center;width:100%}.navigation__toggle-link:active,.navigation__toggle-link:hover{background-position:100%;color:#212121;transform:translateX(1rem)}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e: any) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div><div id="navbar" class="navigation"><picture id="navbar_logo" class="navigation__logo-box"><img alt="Logo" src="/_nuxt/img/logo.3a918df.png" class="navigation__logo"></picture> <div class="navigation__toggle-box"><input id="nav-toggle" type="checkbox" class="navigation__checkbox"> <label for="nav-toggle" class="navigation__button"><span class="navigation__icon"> </span></label> <div class="navigation__background">
+ 
+      </div> <nav class="navigation__nav-toggle"><ul class="navigation__toggle-list"><a href="/" aria-current="page" class="nuxt-link-exact-active nuxt-link-active"><li class="navigation__toggle-item">
+              Home
+            </li></a> <a href="/work"><li class="navigation__toggle-item">
+              Work
+            </li></a> <a href="/contact"><li class="navigation__toggle-item">
+              Contact
+            </li></a></ul></nav></div> <nav class="navigation__nav"><ul class="navigation__nav-primary u-center-text"><a href="/" aria-current="page" class="nuxt-link-exact-active nuxt-link-active"><li class="navigation__toggle-item">
+            Home
+          </li></a> <a href="/#about"><li class="navigation__toggle-item">
+            About
+          </li></a> <a href="/#work"><li class="navigation__toggle-item">
+            Work
+          </li></a> <a href="/#contact"><li class="navigation__toggle-item">
+            Contact
+          </li></a></ul></nav></div> <header class="header index"><div class="bk-img"><div class="header-img1"></div></div> <div class="header__text-box"><h1 class="heading-primary"><span class="heading-primary--sub">Hola, I'm <span>Dan</span></span> <span class="heading-primary--main u-margin-bottom-med u-padding-x">Front-End Developer</span></h1> <div><a href="/work" class="btn btn--light">
+        View Work
+      </a></div></div></header> <main><section id="about" class="section text-image"><div class="grid box fade-in"><div class="text-image__header col-4"><h1 class="heading-secondary">
+          Glad you're here!
+        </h1> <p class="paragraph">
+          I began my career over a decade ago as
+          a Graphic Designer in my home country, Venezuela. Later in life, I
+          expanded my passion for clean and minimal design to the digital
+          world of web development.
+        </p> <p class="paragraph">
+          Outside of work, I enjoy spending time in nature, traveling,
+          recording music at home, photographing, hiking, and sharing time
+          with my wife, kids and cats.
+        </p> <div class="items"><p class="paragraph">
+    Some of the technologies I most commonly use:
+  </p> <ul class="items__list"><li class="items__item"><span>HTML</span></li><li class="items__item"><span>CSS</span></li><li class="items__item"><span>SCSS</span></li><li class="items__item"><span>Javascript (ES6)</span></li><li class="items__item"><span>Twig</span></li><li class="items__item"><span>Vue.js</span></li><li class="items__item"><span>Vuex</span></li><li class="items__item"><span>Vue CLI</span></li><li class="items__item"><span>Tailwind</span></li><li class="items__item"><span>Bootstrap</span></li><li class="items__item"><span>Wordpress</span></li><li class="items__item"><span>Craft CMS</span></li><li class="items__item"><span>Git</span></li><li class="items__item"><span>GitHub</span></li><li class="items__item"><span>GitLab</span></li><li class="items__item"><span>Pantheon</span></li><li class="items__item"><span>Adobe CC</span></li><li class="items__item"><span>Adobe XD</span></li><li class="items__item"><span>Zeplin</span></li><li class="items__item"><span>Affinity Studio</span></li></ul></div></div> <div class="col-2 composition"><div class="composition__box fade-box"><picture><source data-srcset="/_nuxt/img/dan.1989d8f.jpg" media="(min-width:900px)" type="image/jpg"> <img data-src="/_nuxt/img/dan-small.2ab7816.jpg" class="lazyload"></picture></div></div></div></section> <section id="work" class="section work bg-light"><div class="work__grid"><div class="grid"><div class="work__header"><h2 class="heading-secondary">
+      Featured Work
+    </h2></div> <select aria-label="Select" class="work__list list"><option disabled value="">
+      Filter by Category
+    </option> <option>
+      website
+    </option><option>
+      graphic design
+    </option><option>
+      ux-design
+    </option><option>
+      all work
+    </option></select> <div class="cards"><div class="cards__grid"><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/wilson.342722e.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/wilson-small.f9acc2a.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            Wilson Group
+          </h3> <p class="paragraph">
+            Static Property Management Website for Wilson Group built entirely on HTML and SCSS
+          </p></div> <div class="card__footer"><a href="https://wilsongrouppm.com/" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">Visit Website
+            <span class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" fill="currentColor"> <g><polyline points="216 100 216 40 156 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline> <line x1="144" y1="112" x2="216" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <path d="M184,144v64a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></g></svg></span></a> <div class="card__labels"><span>
+              HTML
+            </span><span>
+              SCSS
+            </span></div></div></div><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/hero-md.a858b36.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/hero-sm.0295df2.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            This Site
+          </h3> <p class="paragraph">
+            I rebuilt this site using Nuxt.js and Vue for having more options to add new features in the future.
+          </p></div> <div class="card__footer"><a href="https://github.com/dmontesi" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">View on Github
+            <span class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" fill="currentColor"> <g><polyline points="216 100 216 40 156 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline> <line x1="144" y1="112" x2="216" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <path d="M184,144v64a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></g></svg></span></a> <div class="card__labels"><span>
+              Nuxt.js
+            </span><span>
+              Vue.js
+            </span><span>
+              SCSS
+            </span></div></div></div><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/cedar.7920699.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/cedar-small.a72fbcd.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            Cedar Place
+          </h3> <p class="paragraph">
+            Somerville’s condominium home community, wireframed and put together entirely from scratch.
+          </p></div> <div class="card__footer"><a href="https://cedar-place.web.app/" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">Visit Website
+            <span class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" fill="currentColor"> <g><polyline points="216 100 216 40 156 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline> <line x1="144" y1="112" x2="216" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <path d="M184,144v64a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></g></svg></span></a> <div class="card__labels"><span>
+              HTML
+            </span><span>
+              SCSS
+            </span><span>
+              Green Sock
+            </span><span>
+              JQuery
+            </span><span>
+              XD
+            </span></div></div></div><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/infocus.7576865.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/infocus.7576865.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            InFocus Real Estate Marketing
+          </h3> <p class="paragraph">
+            Website Design & Responsive Web Development for InFocus RE Marketing.
+          </p></div> <div class="card__footer"><a href="https://infocusremarketing.com/" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">Visit Website
+            <span class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" fill="currentColor"> <g><polyline points="216 100 216 40 156 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline> <line x1="144" y1="112" x2="216" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <path d="M184,144v64a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></g></svg></span></a> <div class="card__labels"><span>
+              HTML
+            </span><span>
+              SCSS
+            </span><span>
+              JS
+            </span></div></div></div><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/maynooth.26e1571.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/maynooth-small.60d8bdd.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            Furniture Website Mockup
+          </h3> <p class="paragraph">
+            Website & Mobile app for fictional furniture store.
+          </p></div> <div class="card__footer"><a href="https://www.behance.net/dmontesinos" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">Visit Page →
+            <!----></a> <div class="card__labels"><span>
+              Adobe XD
+            </span></div></div></div><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/lboe.8ed126d.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/lboe-small.6fe90b0.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            Post-War CD
+          </h3> <p class="paragraph">
+            Design for Last Builders Of Empire's Limited Edition Album "Post-War"
+          </p></div> <div class="card__footer"><a href="https://www.behance.net/gallery/67382723/Digipak-CD-Sleeves-Last-Builders-Of-Empire-Post-War" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">Visit Page →
+            <!----></a> <div class="card__labels"><span>
+              Adobe Illustrator
+            </span><span>
+              Adobe Photoshop
+            </span></div></div></div><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/menus.84c7fca.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/menus-small.145a9fd.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            Daily Menus
+          </h3> <p class="paragraph">
+            Culinary School Daily Menus. UNEY, Venezuela.
+          </p></div> <div class="card__footer"><a href="https://www.behance.net/gallery/46365033/Daily-Menus" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">Visit Page →
+            <!----></a> <div class="card__labels"><span>
+              Adobe Illustrator
+            </span><span>
+              Adobe Photoshop
+            </span></div></div></div><div class="card bg-dark"><picture><source data-srcset="/_nuxt/img/ldsc-book.bca4d2c.jpg" media="(min-width:56.25em)" type="image/jpg"> <img data-src="/_nuxt/img/ldsc-book-small.71f8814.jpg" class="card__img lazyload"></picture> <div class="card__content"><!----> <h3 class="heading-tertiary u-margin-bottom-tiny">
+            Book Design
+          </h3> <p class="paragraph">
+            Student's Community Service Law
+          </p></div> <div class="card__footer"><a href="https://www.behance.net/gallery/70538225/Students-Community-Service-Law-Book-Design" target="_blank" rel="noreferrer" aria-label="Visit link" class="card__cta text-link">Visit Page →
+            <!----></a> <div class="card__labels"><span>
+              Adobe InDesign
+            </span><span>
+              Adobe Illustrator
+            </span></div></div></div></div></div></div></div></section> <section id="contact" class="section contact text-image"><div class="grid"><div class="text-image__header col-4"><h2 class="heading-secondary">
+          Contact
+        </h2> <p class="paragraph">
+          Whether you would like my services for a project, get extra
+          information on any of my work, ask me about this site or just say
+          hello then you're in the right place.
+        </p> <a href="mailto:hello@danmontesinos.com?Subject=Inquiry" class="btn btn--dark-2 btn--space">Let's chat.</a></div> <div class="col-2 composition"><div class="composition__box fade-box"><picture><source data-srcset="/_nuxt/img/contact.0a54978.jpg" media="(min-width:900px)" type="image/jpg"> <img data-src="/_nuxt/img/contact-small.665584d.jpg" class="lazyload"></picture></div></div></div></section></main> <footer class="footer"><div class="grid"><div class="footer__logo-box"><img src="/_nuxt/img/logo-white.c77de06.png" alt="Dan Montesinos Logo" class="footer__logo"></div></div> <div class="grid footer__items"><div class="col-3"><div class="footer__navigation"><ul class="footer__list"><a href="/" aria-current="page" class="nuxt-link-exact-active nuxt-link-active"><li class="footer__item">
+              Home
+            </li></a> <a href="/#about"><li class="footer__item">
+              About
+            </li></a> <a href="/#work"><li class="footer__item">
+              Work
+            </li></a> <a href="/#contact"><li class="footer__item">
+              Contact
+            </li></a></ul></div></div> <div class="col-3"><div class="footer__column social"><a href="https://github.com/dmontesi" target="_blank" aria-label="View code on Github"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="28" height="28" fill="currentColor"> <g><path d="M84,240a23.9,23.9,0,0,0,24-24V168" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path> <path d="M172,240a23.9,23.9,0,0,1-24-24V168" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path> <path d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path> <path d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path> <path d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></g></svg></a> <a href="https://www.behance.net/dmontesinos" target="_blank" aria-label="View my work on Behance"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="28" height="28" fill="currentColor"> <g><line x1="168" y1="80" x2="232" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <path d="M160,152h80a39.9,39.9,0,1,0-11.7,28.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path> <path d="M32,124H98a34,34,0,0,1,0,68H32V64H86a30,30,0,0,1,0,60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></g></svg></a> <a href="https://www.linkedin.com/in/daniel-montesinos" target="_blank" aria-label="View my profile on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="28" height="28" fill="currentColor"> <g><rect x="36" y="36" width="184" height="184" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect> <line x1="120" y1="112" x2="120" y2="176" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <line x1="88" y1="112" x2="88" y2="176" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line> <path d="M120,140a28,28,0,0,1,56,0v36" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path> <circle cx="88" cy="80" r="12"></circle></g></svg></a></div></div> <p class="footer__copyright col-1">
+      ©2022 | Site
+      developed by
+      <a href="http://danmontesinos.com/" target="_blank" class="link footer__link">Dan Montesinos.</a></p></div></footer></div></div></div><script>window.__NUXT__=function(e,t,a,i,l,r,s,o,n,u,g,d,m,c,b,p){return{layout:"default",data:[{}],fetch:{},error:null,state:{page:"index",technologies:[l,"CSS",a,"Javascript (ES6)","Twig",d,"Vuex","Vue CLI","Tailwind","Bootstrap","Wordpress","Craft CMS","Git","GitHub","GitLab","Pantheon","Adobe CC",m,"Zeplin","Affinity Studio"],selected:"Filter by category",categories:[i,r,c,"all work"],posts:[{title:"Wilson Group",description:"Static Property Management Website for Wilson Group built entirely on HTML and SCSS",alt:"Wilson Group Property Management",image:"wilson-small",imageLg:"wilson",url:"https://wilsongrouppm.com/",target:e,external:!0,cta:u,year:s,label:i,labels:[l,a],featured:t},{title:"This Site",description:"I rebuilt this site using Nuxt.js and Vue for having more options to add new features in the future.",alt:"Dan Montesinos Web Development",image:"hero-sm",imageLg:"hero-md",url:"https://github.com/dmontesi",external:!0,target:e,cta:"View on Github",year:s,label:i,labels:["Nuxt.js",d,a],featured:t},{title:"Cedar Place",description:"Somerville’s condominium home community, wireframed and put together entirely from scratch.",alt:"Cedar Place Condominiums",image:"cedar-small",imageLg:"cedar",url:"https://cedar-place.web.app/",external:!0,target:e,cta:u,year:s,label:i,labels:[l,a,"Green Sock","JQuery","XD"],featured:t},{title:"InFocus Real Estate Marketing",description:"Website Design & Responsive Web Development for InFocus RE Marketing.",alt:"Real Estate Marketing",image:b,imageLg:b,url:"https://infocusremarketing.com/",external:!0,target:e,cta:u,year:2020,label:i,labels:[l,a,"JS"],featured:t},{title:"Furniture Website Mockup",description:"Website & Mobile app for fictional furniture store.",alt:o,image:"maynooth-small",imageLg:"maynooth",url:"https://www.behance.net/dmontesinos",cta:n,year:s,target:e,label:c,labels:[m],featured:t},{title:"Post-War CD",description:'Design for Last Builders Of Empire\'s Limited Edition Album "Post-War"',alt:o,image:"lboe-small",imageLg:"lboe",url:"https://www.behance.net/gallery/67382723/Digipak-CD-Sleeves-Last-Builders-Of-Empire-Post-War",cta:n,target:e,year:2014,label:r,labels:[g,p],featured:t},{title:"Daily Menus",description:"Culinary School Daily Menus. UNEY, Venezuela.",alt:o,image:"menus-small",imageLg:"menus",url:"https://www.behance.net/gallery/46365033/Daily-Menus",cta:n,target:e,year:2008,label:r,labels:[g,p],featured:t},{title:"Book Design",description:"Student's Community Service Law",alt:o,image:"ldsc-book-small",imageLg:"ldsc-book",url:"https://www.behance.net/gallery/70538225/Students-Community-Service-Law-Book-Design",cta:n,target:e,year:2008,label:r,labels:["Adobe InDesign",g],featured:t}]},serverRendered:!0,routePath:"/",config:{_app:{basePath:"/",assetsPath:"/_nuxt/",cdnURL:null}}}}("_blank",!1,"SCSS","website","HTML","graphic design",2019,"Furniture","Visit Page →","Visit Website","Adobe Illustrator","Vue.js","Adobe XD","ux-design","infocus","Adobe Photoshop")</script><script src="/_nuxt/07185dc.js" defer></script><script src="/_nuxt/d266768.js" defer></script><script src="/_nuxt/0fcd2cc.js" defer></script><script src="/_nuxt/6f37d76.js" defer></script><script src="/_nuxt/f62853f.js" defer></script>
   </body>
 </html>
