@@ -3,8 +3,8 @@ $color-primary: hsl(0, 0%, 13%);
 $color-primary-light: hsl(0, 0%, 31%);
 $color-primary-dark: hsl(0, 0%, 9%);
 
-$color-secondary: #636e72;
-$color-secondary-dark: #2f3944;
+$color-secondary: #8C7242;
+$color-secondary-dark: #1D2621;
 
 $color-gray-light: hsl(0, 0%, 74%);
 $color-gray-light-2: hsl(0, 0%, 84%);
@@ -17,8 +17,22 @@ $color-white: #fff;
 $color-black: #000;
 
 //TEXT
-$default-font-size: 1.6rem;
-$small-font-size: 1.4rem;
+:root {
+	--ff-default: 1.7rem;
+	--ff-small: 1.5rem;
+}
+
+@include responsive(tab-port) {
+	:root {
+		--ff-small: 1.7rem;
+	}
+}
+
+@include responsive(phone) {
+	:root {
+		--ff-default: 1.7rem;
+	}
+}
 
 //GRID
 $grid-width: 114rem; //1140px

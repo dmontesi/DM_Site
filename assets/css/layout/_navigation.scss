@@ -35,7 +35,7 @@
       a:visited {
         font-weight: 400;
         padding: 3rem 2.5rem;
-        font-size: $default-font-size;
+        font-size: var(--ff-default);
         color: $color-secondary-dark;
         text-decoration: none;
         text-transform: uppercase;

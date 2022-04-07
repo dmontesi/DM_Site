@@ -33,7 +33,7 @@ body {
   font-family: $font-primary;
   font-weight: 300;
   line-height: 1.7;
-  font-size: $default-font-size;
+  font-size: var(--ff-default);
   color: $color-gray-dark;
 
   @include responsive(tab-port) {
@@ -160,7 +160,7 @@ body {
 }
 
 .paragraph {
-  font-size: $default-font-size;
+  font-size: var(--ff-default);
 
   @include responsive(tab-port) {
     font-size: 1.5rem;
@@ -172,7 +172,7 @@ body {
 }
 
 .highlight {
-  font-size: $default-font-size;
+  font-size: var(--ff-default);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -206,7 +206,7 @@ body {
 }
 
 .bold {
-  font-size: $default-font-size;
+  font-size: var(--ff-default);
   font-weight: 600;
 }
 
