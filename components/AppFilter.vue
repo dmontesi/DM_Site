@@ -21,12 +21,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['posts', 'categories']),
-    // ...mapGetters(['filteredLabel']),
-    filteredLabel () {
-      const filter = new RegExp(this.selected, 'i')
-      return this.posts.filter(el => el.label.match(filter))
-    }
+    ...mapState(['posts', 'categories'])
   }
 }
 </script>

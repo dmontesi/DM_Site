@@ -5,7 +5,7 @@
     </p>
     <ul class="items__list">
       <li v-for="item in technologies" :key="item.title" class="items__item">
-        <span>{{ item.technology }}</span>
+        <span>{{ item }}</span>
       </li>
     </ul>
   </div>

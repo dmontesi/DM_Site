@@ -1,44 +1,13 @@
 export const state = () => ({
   page: 'index',
-  technologies: [
-    { title: 'Languages:', technology: 'HTML, CSS, SCSS, Javascript (ES6), Twig, Vue, Vuex' },
-    { title: 'Frameworks:', technology: 'Bootstrap, Bulma, Vue CLI, NuxtJS, Tailwind' },
-    { title: 'CMS:', technology: 'Wordpress, Craft CMS' },
-    { title: 'Build:', technology: 'Node, npm, Gulp, Webpack' },
-    { title: 'Repos:', technology: 'GitHub, GitLab, Pantheon' },
-    { title: 'Other:', technology: 'Adobe Creative Suite, Adobe XD, Adobe Lightroom, Zeplin, Affinity Studio, Ableton Live' }
-  ],
+  technologies: ['HTML', 'CSS', 'SCSS', 'Javascript (ES6)', 'Twig', 'Vue.js', 'Vuex', 'Vue CLI', 'Tailwind', 'Bootstrap', 'Wordpress', 'Craft CMS', 'Git', 'GitHub', 'GitLab', 'Pantheon', 'Adobe CC', 'Adobe XD', 'Zeplin', 'Affinity Studio'],
   selected: 'Filter by category',
-  categories: ['website', 'graphic design', 'ux-design'],
+  categories: ['website', 'graphic design', 'ux-design', 'all work'],
   posts: [
-    {
-      title: 'Front End Development',
-      description:
-        'Offering highly responsive, mobile friendly sites that look up to date with the latest trends.',
-      image: 'web-small',
-      imageLg: 'web',
-      alt: 'Coding Website',
-      url: '/websites',
-      cta: 'View Samples →',
-      label: 'website',
-      featured: true
-    },
-    {
-      title: 'Graphic Design',
-      description:
-        'From high end brochures to band album covers. Printing available through third party',
-      alt: 'CD Cover',
-      image: 'lboe-small',
-      imageLg: 'lboe',
-      url: '/graphic design',
-      cta: 'View Samples →',
-      label: 'graphic design',
-      featured: true
-    },
     {
       title: 'Wilson Group',
       description:
-        'Static Property Management Website for Wilson Group',
+        'Static Property Management Website for Wilson Group built entirely on HTML and SCSS',
       alt: 'Wilson Group Property Management',
       image: 'wilson-small',
       imageLg: 'wilson',
@@ -48,13 +17,29 @@ export const state = () => ({
       cta: 'Visit Website',
       year: 2019,
       label: 'website',
-      labels: ['html', 'scss'],
+      labels: ['HTML', 'SCSS'],
+      featured: false
+    },
+    {
+      title: 'This Site',
+      description:
+        'I rebuilt this site using Nuxt.js and Vue for having more options to add new features in the future.',
+      alt: 'Dan Montesinos Web Development',
+      image: 'hero-sm',
+      imageLg: 'hero-md',
+      url: 'https://github.com/dmontesi',
+      external: true,
+      target: '_blank',
+      cta: 'View on Github',
+      year: 2019,
+      label: 'website',
+      labels: ['Nuxt.js', 'Vue.js', 'SCSS'],
       featured: false
     },
     {
       title: 'Cedar Place',
       description:
-        'Somerville’s condominium home community, Cedar Place offers an array of fine residences for every taste.',
+        'Somerville’s condominium home community, wireframed and put together entirely from scratch.',
       alt: 'Cedar Place Condominiums',
       image: 'cedar-small',
       imageLg: 'cedar',
@@ -64,7 +49,7 @@ export const state = () => ({
       cta: 'Visit Website',
       year: 2019,
       label: 'website',
-      labels: ['html', 'scss', 'javascript'],
+      labels: ['HTML', 'SCSS', 'Green Sock', 'JQuery', 'XD'],
       featured: false
     },
     {
@@ -80,21 +65,22 @@ export const state = () => ({
       cta: 'Visit Website',
       year: 2020,
       label: 'website',
-      labels: ['html', 'scss', 'js'],
+      labels: ['HTML', 'SCSS', 'JS'],
       featured: false
     },
     {
-      title: 'Furniture Website',
+      title: 'Furniture Website Mockup',
       description:
         'Website & Mobile app for fictional furniture store.',
       alt: 'Furniture',
-      image: 'lboe-small',
-      imageLg: 'lboe',
-      url: '/',
+      image: 'maynooth-small',
+      imageLg: 'maynooth',
+      url: 'https://www.behance.net/dmontesinos',
       cta: 'Visit Page →',
       year: 2019,
+      target: '_blank',
       label: 'ux-design',
-      labels: ['ux'],
+      labels: ['Adobe XD'],
       featured: false
     },
     {
@@ -104,11 +90,12 @@ export const state = () => ({
       alt: 'Furniture',
       image: 'lboe-small',
       imageLg: 'lboe',
-      url: '/',
+      url: 'https://www.behance.net/gallery/67382723/Digipak-CD-Sleeves-Last-Builders-Of-Empire-Post-War',
       cta: 'Visit Page →',
+      target: '_blank',
       year: 2014,
       label: 'graphic design',
-      labels: ['illustrator', 'photoshop'],
+      labels: ['Adobe Illustrator', 'Adobe Photoshop'],
       featured: false
     },
     {
@@ -118,11 +105,12 @@ export const state = () => ({
       alt: 'Furniture',
       image: 'menus-small',
       imageLg: 'menus',
-      url: '/',
+      url: 'https://www.behance.net/gallery/46365033/Daily-Menus',
       cta: 'Visit Page →',
+      target: '_blank',
       year: 2008,
       label: 'graphic design',
-      labels: ['illustrator', 'photoshop'],
+      labels: ['Adobe Illustrator', 'Adobe Photoshop'],
       featured: false
     },
     {
@@ -132,11 +120,12 @@ export const state = () => ({
       alt: 'Furniture',
       image: 'ldsc-book-small',
       imageLg: 'ldsc-book',
-      url: '/',
+      url: 'https://www.behance.net/gallery/70538225/Students-Community-Service-Law-Book-Design',
       cta: 'Visit Page →',
+      target: '_blank',
       year: 2008,
       label: 'graphic design',
-      labels: ['illustrator', 'photoshop'],
+      labels: ['Adobe InDesign', 'Adobe Illustrator'],
       featured: false
     }
   ]

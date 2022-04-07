@@ -42,14 +42,22 @@
 	}
 
 	&__content,
-	&__cta {
+	&__footer {
 		padding-left: 2.5rem;
 		padding-right: 2.5rem;
 	}
 
-	&__cta {
+	&__footer {
+		display: flex;
+		flex-flow: row-reverse;
+		justify-content: space-between;
+		align-items: flex-end;
 		margin-top: auto;
 		padding-bottom: 2.5rem;
+	}
+
+	&__cta {
+		
 		display: flex;
 		align-items: center;
 		gap: .5rem;
@@ -61,9 +69,19 @@
 		}
 	}
 
+	
+
 	&__icon {
 		display: flex;
 		padding-bottom: .125rem;
+	}
+
+	&__labels {
+		display: flex;
+		gap: 1rem;
+		color: $color-secondary;
+		font-size: var(--ff-small);
+		text-decoration: underline;
 	}
 
 	.category {

@@ -39,6 +39,12 @@ section {
   &.bg-light {
     background-color: $color-gray-light-3;
   }
+
+  &.contact {
+    .col-4 {
+      justify-items: start;
+    }
+  }
 }
 
 ::selection {

@@ -1,6 +1,7 @@
 .grid {
   display: grid;
   align-items: center;
+  
   gap: $gutter-horizontal;
   grid-template-columns: repeat(6, 1fr);
   max-width: $grid-width; //1140px

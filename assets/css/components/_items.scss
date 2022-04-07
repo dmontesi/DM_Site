@@ -5,11 +5,29 @@
   &__list {
     list-style-type: none;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     row-gap: 0.25rem;
   }
 
   &__item {
     display: flex;
+    // align-items: baseline;
+    // justify-content: center;
     gap: 1rem;
+    
+    color: $color-secondary;
+    font-size: var(--ff-small);
+    text-align: center;
+    text-decoration: underline;
+
+    @include responsive(phone) {
+      --ff-small: 1.3rem;
+    }
+
+    span {
+      // border: 1px solid $color-secondary;
+      // border-radius: .4rem;
+      padding: 0 1rem;
+    }
   }
 }

@@ -6,7 +6,7 @@
       </h2>
     </div>
 
-    <select v-model="selected" class="work__list list" aria-label="Select Work">
+    <select v-model="selected" class="work__list list" aria-label="Select">
       <option disabled value="">
         Filter by Category
       </option>
@@ -45,17 +45,24 @@
               {{ post.description }}
             </p>
           </div>
-          <a
-            :href="post.url"
-            :target="post.target"
-            rel="noreferrer"
-            class="card__cta text-link"
-            aria-label="Visit link"
-          >{{ post.cta }}
-            <span
-              v-if="post.external"
-              class="card__icon"
-            ><ph-arrow-square-out :size="20" /></span></a>
+          <div class="card__footer">
+            <a
+              :href="post.url"
+              :target="post.target"
+              rel="noreferrer"
+              class="card__cta text-link"
+              aria-label="Visit link"
+            >{{ post.cta }}
+              <span
+                v-if="post.external"
+                class="card__icon"
+              ><ph-arrow-square-out :size="20" /></span></a>
+            <div class="card__labels">
+              <span v-for="el in post.labels" :key="el.label">
+                {{ el }}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
