@@ -27,7 +27,7 @@ export const state = () => ({
       alt: 'Dan Montesinos Web Development',
       image: 'hero-sm',
       imageLg: 'hero-md',
-      url: 'https://github.com/dmontesi',
+      url: 'http://github.com/dmontesi?tab=repositories',
       external: true,
       target: '_blank',
       cta: 'View on Github',
