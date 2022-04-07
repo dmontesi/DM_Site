@@ -30,7 +30,8 @@ $color-black: #000;
 
 @include responsive(phone) {
 	:root {
-		--ff-default: 1.7rem;
+        --ff-default: 1.7rem;
+        --ff-small: 1.3rem;
 	}
 }
 

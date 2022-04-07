@@ -20,10 +20,6 @@
     text-align: center;
     text-decoration: underline;
 
-    @include responsive(phone) {
-      --ff-small: 1.3rem;
-    }
-
     span {
       // border: 1px solid $color-secondary;
       // border-radius: .4rem;
