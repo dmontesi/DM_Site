@@ -15,7 +15,7 @@
   .col-2 {
     grid-column: span 2;
 
-    @include responsive(tab-port) {
+    @include responsive(phone) {
       grid-column: 1 / -1;
     }
   }
@@ -23,7 +23,7 @@
   .col-3 {
     grid-column: span 3;
 
-    @include responsive(tab-port) {
+    @include responsive(phone) {
       grid-column: 1 / -1;
     }
   }
@@ -31,7 +31,7 @@
   .col-4 {
     grid-column: span 4;
 
-    @include responsive(tab-port) {
+    @include responsive(phone) {
       grid-column: 1 / -1;
     }
   }
