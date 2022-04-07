@@ -1,9 +1,18 @@
 .work {
   &__header {
-    grid-column: span 5;
+    grid-column: span 4;
+    
   }
 
   &__list {
     align-self: center;
+    grid-column: span 2;
+  }
+
+  &__header,
+  &__list {
+    @include responsive(phone){
+      grid-column: 1 / -1;
+    }
   }
 }

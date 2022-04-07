@@ -13,12 +13,22 @@
 
 	&:hover {
 		transform: translateY(-5px);
+		
+
+		.card__cta {
+			color: $color-secondary;
+			transition: transform 0.2s ease-out, color 0.2s ease-out;
+		}
 	}
 
 	&__img {
 		width: 100%;
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
+
+		@include responsive(phone) {
+			aspect-ratio: 1 / 1;
+		}
 	}
 
 	&__content {
