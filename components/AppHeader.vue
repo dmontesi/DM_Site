@@ -7,7 +7,7 @@
     }"
   >
     <transition-group name="bk" tag="div" class="bk-img">
-      <div v-if="page === 'index'" key="img1" class="header-img1" />
+      <div v-if="page === 'index'" key="img1" class="header-img1" title="Cover image by Etienne Bösiger." />
       <div v-else-if="page === 'work'" key="img2" class="header-img2" />
       <div v-else key="img3" class="header-img3" />
     </transition-group>
