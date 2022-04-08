@@ -2,7 +2,7 @@ export const state = () => ({
   page: 'index',
   technologies: ['HTML', 'CSS', 'SCSS', 'Javascript (ES6)', 'Twig', 'Vue.js', 'Vuex', 'Vue CLI', 'Tailwind', 'Bootstrap', 'Wordpress', 'Craft CMS', 'Git', 'GitHub', 'GitLab', 'Pantheon', 'Adobe CC', 'Adobe XD', 'Zeplin', 'Affinity Studio'],
   selected: 'Filter by category',
-  categories: ['website', 'graphic design', 'ux-design', 'all work'],
+  categories: ['website', 'graphic design', 'ux-design'],
   posts: [
     {
       title: 'Wilson Group',

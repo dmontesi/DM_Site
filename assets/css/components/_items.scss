@@ -7,6 +7,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     row-gap: 0.25rem;
+
+    @include responsive(phone) {
+      grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    }
   }
 
   &__item {
@@ -19,11 +23,5 @@
     font-size: var(--ff-small);
     text-align: center;
     text-decoration: underline;
-
-    span {
-      // border: 1px solid $color-secondary;
-      // border-radius: .4rem;
-      padding: 0 1rem;
-    }
   }
 }

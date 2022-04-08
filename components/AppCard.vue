@@ -6,7 +6,7 @@
       </h2>
     </div>
 
-    <select v-model="selected" class="work__list list" aria-label="Select">
+    <select v-model="selected" class="work__list filter" aria-label="Select">
       <option disabled value="">
         Filter by Category
       </option>
