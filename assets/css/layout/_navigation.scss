@@ -1,9 +1,19 @@
+
+#navbar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0rem;
+	width: 100%;
+	z-index: 1000;
+	transition: 0.5s;
+}
+
 .navigation {
   background-color: $color-white;
   backdrop-filter: saturate(200%) blur(20px);
   display: flex;
   align-items: center;
-  position: relative;
+  border-bottom: 1px solid $color-gray-light-3;
 
   &__nav {
     text-align: center;
@@ -96,8 +106,8 @@
     @include responsive(tab-port) {
       background-color: $color-white;
       border-radius: 50% 50%;
-      top: 3rem;
-      right: 3rem;
+      top: 0;
+      right: 0;
     }
   }
 

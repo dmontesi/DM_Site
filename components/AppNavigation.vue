@@ -25,12 +25,17 @@
               Home
             </li>
           </NuxtLink>
-          <NuxtLink to="/work">
+          <NuxtLink to="#about">
+            <li class="navigation__toggle-item">
+              About
+            </li>
+          </NuxtLink>
+          <NuxtLink to="#work">
             <li class="navigation__toggle-item">
               Work
             </li>
           </NuxtLink>
-          <NuxtLink to="/contact">
+          <NuxtLink to="#contact">
             <li class="navigation__toggle-item">
               Contact
             </li>
