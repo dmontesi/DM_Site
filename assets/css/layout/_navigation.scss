@@ -199,7 +199,7 @@
 
     opacity: 0;
     width: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
 
     a:link,
     a:visited {
@@ -220,7 +220,7 @@
         $color-white 50%
       );
       background-size: 230%;
-      transition: all 0.4s;
+      transition: all 0.2s;
     }
 
     .navigation__toggle-list {

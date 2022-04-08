@@ -21,6 +21,8 @@
           v-for="post in filteredLabel"
           :key="post.title"
           class="card bg-dark"
+          data-aos="fade-up"
+          data-aos-duration="500"
         >
           <picture>
             <source
@@ -72,11 +74,13 @@
 <script>
 import { mapState } from 'vuex'
 import { PhArrowSquareOut } from 'phosphor-vue'
-// import AppFilter from '~/components/AppFilter'
+
+// importing AOS css style globally
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
 export default {
   components: {
-    // AppFilter,
     PhArrowSquareOut
   },
   data () {
@@ -87,11 +91,14 @@ export default {
 
   computed: {
     ...mapState(['posts', 'categories']),
-    // ...mapGetters(['filteredLabel']),
     filteredLabel () {
       const filter = new RegExp(this.selected, 'i')
       return this.posts.filter(el => el.label.match(filter))
     }
+  },
+
+  mounted () {
+    AOS.init()
   }
 }
 </script>
