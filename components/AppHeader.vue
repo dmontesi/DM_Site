@@ -18,7 +18,7 @@
         <span class="heading-primary--main u-margin-bottom-med u-padding-x">Front-End Developer <br/>& Designer</span>
       </h1>
       <div v-if="page === 'index'">
-        <NuxtLink to="/work" class="btn btn--light">
+        <NuxtLink to="#work" class="btn btn--light">
           View Work
         </NuxtLink>
       </div>
