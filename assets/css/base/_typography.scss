@@ -72,18 +72,18 @@ body {
     }
   }
 
-  &--sub {
+  &--eyebrow {
     display: block;
     font-size: 3.2rem;
     font-weight: 300;
-    animation: reveal 0.5s ease-out 0s 1 normal both;
+    // animation: reveal 0.5s ease-out 0s 1 normal both;
 
     @include responsive(phone) {
       font-size: 1.9rem;
     }
 
     span {
-      border-bottom: 1.5px solid $color-white;
+      border-bottom: 1px solid $color-white;
       font-style: italic;
     }
   }
@@ -243,3 +243,24 @@ i.fab {
     transform: translateY(-5px);
   }
 }
+
+// Vue Typer
+
+// span.vue-typer,
+// span.typed[data-v-302772ec] {
+//   color: $color-white;
+// }
+
+// span.vue-typer span.left[data-v-c41bac74], span.vue-typer span.right[data-v-c41bac74],
+// span.complete[data-v-a16e0f02] {
+//   color: $color-white;
+// }
+
+// span.typing[data-v-a16e0f02], span.pre-type,
+// span.idle[data-v-a16e0f02], span.typing[data-v-a16e0f02] {
+//   background-color: $color-white;
+// }
+
+// span[data-v-a16e0f02] {
+//   width: 2px;
+// }

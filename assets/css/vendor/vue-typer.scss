@@ -1,0 +1,86 @@
+:root {
+  --fg: $color-primary;
+}
+
+/* SCSS */
+.vue-typer {
+  /* Styles for the vue-typer container
+     e.g. font-family, font-size  */
+
+  span[data-v-a16e0f02] {
+    width: 1.5px;
+  }
+
+  .custom.char {
+    /* Styles for each character
+       e.g. color, background-color */
+    color: var(--fg);
+
+    &.typed {
+      /* Styles specific to typed characters
+         i.e. characters to the left of the caret */
+      color: $color-white;
+    }
+    &.selected {
+      /* Styles specific to selected characters
+         i.e. characters to the right of the caret while VueTyper's
+              'eraseStyle' is set to a selection-based style */
+    }
+    &.erased {
+      /* Styles specific to erased characters
+         i.e. characters to the right of the caret while VueTyper's
+              'eraseStyle' is set to a non-selection-based style */
+    }
+  }
+
+  .custom.caret {
+    /* Styles for the caret
+       e.g. background-color, animation, display */
+
+    &.pre-type {
+      /* Styles for the caret when it is idle before typing
+         i.e. before a string starts being typed, during 'preTypeDelay' */
+      color: $color-white;
+    }
+    &.pre-erase {
+      /* Styles for the caret when it is idle before erasing
+         i.e. before a string starts being erased, during 'preEraseDelay' */
+    }
+    &.idle {
+      /* Styles for the caret when it is idle, but VueTyper has not yet completed typing
+         i.e. when 'pre-type' or 'pre-erase' is set, but not 'complete' */
+      color: $color-white;
+    }
+    &.typing {
+      /* Styles for the caret while VueTyper is typing
+         i.e. when the caret is moving forwards */
+      color: $color-white;
+    }
+    &.selecting {
+      /* Styles for the caret while VueTyper is selecting
+         i.e. when the caret is moving backwards and 'eraseStyle' is
+         set to a selection-based style */
+    }
+    &.erasing {
+      /* Styles for the caret while VueTyper is erasing
+         i.e. when the caret is moving backwards and 'eraseStyle' is
+         set to a non-selection-based style */
+    }
+    &.complete {
+      /* Styles for the idle caret when VueTyper has finished all typing/erasing */
+      color: $color-white;
+    }
+  }
+
+  .heading-primary--eyebrow &,
+  .heading-primary--main & {
+    --fg: hsl(0, 0%, 100%);
+
+    span.typing[data-v-a16e0f02],
+    span.pre-type,
+    span.idle[data-v-a16e0f02],
+    span.typing[data-v-a16e0f02] {
+      background-color: var(--fg);
+    }
+  }
+}

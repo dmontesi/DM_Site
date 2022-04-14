@@ -65,11 +65,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 110rem;
+    width: 80rem;
     z-index: 20;
 
     @include responsive(tab-port) {
-      width: 75rem;
+      width: 64rem;
     }
 
     @include responsive(phone) {
