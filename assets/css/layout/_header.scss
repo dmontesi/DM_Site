@@ -5,7 +5,7 @@
   position: relative;
 
   &:before {
-    content: "";
+    content: '';
     z-index: 10;
     position: absolute;
     top: 0;
@@ -41,7 +41,7 @@
   }
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -77,18 +77,48 @@
       width: 35rem;
     }
   }
+
+  &__footer {
+    color: $color-white;
+    z-index: 10;
+    position: absolute;
+    bottom: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include responsive(tab-port) {
+      bottom: 8rem;
+    }
+
+    .scroll {
+      position: relative;
+    }
+
+    svg {
+      display: block;
+      width: 1.5rem;
+      @include centered;
+      top: 4rem;
+
+
+      .arrow {
+        fill: $color-white !important;
+        animation: scroll .6s ease-out alternate infinite;
+      }
+    }
+  }
 }
 
 .header-img1 {
-  @include header("~assets/images/hero.jpg");
+  @include header('~assets/images/hero.jpg');
 }
 
 .header-img2 {
-  @include header("~assets/images/XT3S5465_1.jpg");
+  @include header('~assets/images/XT3S5465_1.jpg');
 }
 
 .header-img3 {
-  @include header("~assets/images/XT3S5462.jpg");
+  @include header('~assets/images/XT3S5462.jpg');
 }
 
 .bk-enter-active,

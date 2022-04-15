@@ -24,25 +24,53 @@
         </h4>
         <h1 class="heading-primary--main u-margin-bottom-med u-padding-x">
           <vue-typer
-            :text="['Front End Developer','Designer', 'Front End Developer & Designer']"
+            :text="[
+              'Front End Developer',
+              'Designer',
+              'Front End Developer & Designer',
+            ]"
             :repeat="0"
             :shuffle="false"
             initial-action="typing"
-            :pre-type-delay="170"
+            :pre-type-delay="1000"
             :type-delay="90"
             :pre-erase-delay="2000"
             :erase-delay="250"
             erase-style="select-all"
             :erase-on-complete="false"
             caret-animation="blink"
-          /> <br>
+          />
+          <br>
         </h1>
       </div>
-      <div v-if="page === 'index'">
+      <!-- <div v-if="page === 'index'">
         <NuxtLink to="#work" class="btn btn--light">
           View Work
         </NuxtLink>
-      </div>
+      </div> -->
+    </div>
+
+    <div class="header__footer">
+      <h4 class="scroll">
+        scroll
+        <svg
+          id="svg-arrow-down"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 22 35"
+          style="enable-background: new 0 0 22 35"
+          xml:space="preserve"
+        >
+          <polygon
+            class="arrow"
+            style="fill: #000000"
+            points="20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24 22,13.004 "
+          />
+        </svg>
+      </h4>
     </div>
   </header>
 </template>
