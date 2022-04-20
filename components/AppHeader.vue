@@ -6,7 +6,7 @@
       '-small': page === 'work' || page === 'graphics' || page === 'contact',
     }"
   >
-    <transition-group name="bk" tag="div" class="bk-img">
+    <transition-group name="bk" tag="div" class="bg-img">
       <div
         v-if="page === 'index'"
         key="img1"
@@ -17,16 +17,21 @@
       <div v-else key="img3" class="header-img3" />
     </transition-group>
 
-    <div class="header__text-box">
-      <div class="heading-primary">
-        <h4 class="heading-primary--eyebrow">
+    <div class="header__body">
+      <div
+        class="heading-primary"
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-delay="400"
+      >
+        <h4
+          class="heading-primary--eyebrow"
+        >
           Hi, I'm <span> Dan</span>
         </h4>
         <h1 class="heading-primary--main u-margin-bottom-med u-padding-x">
           <vue-typer
             :text="[
-              'Front End Developer',
-              'Designer',
               'Front End Developer & Designer',
             ]"
             :repeat="0"
@@ -43,15 +48,17 @@
           <br>
         </h1>
       </div>
-      <!-- <div v-if="page === 'index'">
-        <NuxtLink to="#work" class="btn btn--light">
-          View Work
-        </NuxtLink>
-      </div> -->
     </div>
 
-    <div class="header__footer">
-      <h4 class="scroll">
+    <div
+      class="header__footer"
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-delay="3000"
+    >
+      <span
+        class="scroll"
+      >
         scroll
         <svg
           id="svg-arrow-down"
@@ -70,15 +77,17 @@
             points="20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24 22,13.004 "
           />
         </svg>
-      </h4>
+      </span>
     </div>
   </header>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import aosMixin from '~/mixins/aos'
 
 export default {
+  mixins: [aosMixin],
   computed: {
     ...mapState(['page'])
   }

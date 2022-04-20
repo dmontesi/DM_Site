@@ -74,15 +74,13 @@
 <script>
 import { mapState } from 'vuex'
 import { PhArrowSquareOut } from 'phosphor-vue'
-
-// importing AOS css style globally
-import 'aos/dist/aos.css'
-import AOS from 'aos'
+import aosMixin from '~/mixins/aos'
 
 export default {
   components: {
     PhArrowSquareOut
   },
+  mixins: [aosMixin],
   data () {
     return {
       selected: ''
@@ -95,12 +93,6 @@ export default {
       const filter = new RegExp(this.selected, 'i')
       return this.posts.filter(el => el.label.match(filter))
     }
-  },
-
-  mounted () {
-    AOS.init()
   }
 }
 </script>
-
-<style></style>

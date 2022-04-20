@@ -17,11 +17,15 @@
             recording music at home, photographing, hiking, and sharing time
             with my wife, kids and cats.
           </p>
-
           <app-items />
         </div>
         <div class="col-2 composition">
-          <div class="composition__box fade-box">
+          <div
+            class="composition__box fade-box"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-delay="400"
+          >
             <picture>
               <!-- <source
           :data-srcset="require(`~/assets/images/${card.imageLg}.webp`)"
@@ -47,7 +51,7 @@
         <app-card />
       </div>
     </section>
-    <section id="contact" class="section contact text-image">
+    <section id="contact" class="section contact bg-light text-image">
       <div class="grid">
         <div class="text-image__header col-4">
           <h2 class="heading-secondary">
@@ -65,7 +69,12 @@
         </div>
 
         <div class="col-2 composition">
-          <div class="composition__box fade-box">
+          <div
+            class="composition__box fade-box"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-delay="400"
+          >
             <picture>
               <!-- <source
           :data-srcset="require(`~/assets/images/${card.imageLg}.webp`)"
@@ -93,12 +102,14 @@
 import { mapState } from 'vuex'
 import AppItems from '~/components/AppItems'
 import AppCard from '~/components/AppCard'
+import aosMixin from '~/mixins/aos'
 
 export default {
   components: {
     AppCard,
     AppItems
   },
+  mixins: [aosMixin],
   data () {
     return {
       image: 'dan-small',
