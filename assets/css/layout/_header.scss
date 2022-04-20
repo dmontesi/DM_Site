@@ -66,6 +66,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80rem;
+    height: 20rem;
     z-index: 20;
 
     @include responsive(tab-port) {
@@ -74,7 +75,7 @@
 
     @include responsive(phone) {
       top: 60%;
-      width: 35rem;
+      width: 25rem;
     }
   }
 
