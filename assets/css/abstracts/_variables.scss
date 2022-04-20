@@ -3,36 +3,36 @@ $color-primary: hsl(0, 0%, 13%);
 $color-primary-light: hsl(0, 0%, 31%);
 $color-primary-dark: hsl(0, 0%, 9%);
 
-$color-secondary: #8C7242;
-$color-secondary-dark: #1D2621;
+$color-secondary: hsl(39, 36%, 40%);
+$color-secondary-dark: hsl(39, 36%, 15%);
 
 $color-gray-light: hsl(0, 0%, 74%);
 $color-gray-light-2: hsl(0, 0%, 84%);
 $color-gray-light-3: hsl(0, 0%, 94%);
 
-$color-gray-dark: #383838;
-$color-gray-dark-2: #4e4e4e;
+$color-gray-dark: hsl(0, 0%, 22%);
+$color-gray-dark-2: hsl(0, 0%, 31%);
 
-$color-white: #fff;
-$color-black: #000;
+$color-white: #ffffff;
+$color-black: #000000;
 
 //TEXT
 :root {
-	--ff-default: 1.7rem;
-	--ff-small: 1.5rem;
+  --ff-default: 1.7rem;
+  --ff-small: 1.5rem;
 }
 
 @include responsive(tab-port) {
-	:root {
-		--ff-small: 1.7rem;
-	}
+  :root {
+    --ff-small: 1.7rem;
+  }
 }
 
 @include responsive(phone) {
-	:root {
-        --ff-default: 1.7rem;
-        --ff-small: 1.3rem;
-	}
+  :root {
+    --ff-default: 1.5rem;
+    --ff-small: 1.3rem;
+  }
 }
 
 //GRID

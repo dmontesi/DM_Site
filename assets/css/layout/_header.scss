@@ -54,19 +54,23 @@
   &.-small {
     height: 300px;
 
-    .bk-img {
+    .bg-img {
       height: 300px;
     }
   }
 
-  &__text-box {
+  &__body {
+    position: relative;
+  }
+
+  &__body {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80rem;
-    height: 20rem;
+    min-height: 20rem;
     z-index: 20;
 
     @include responsive(tab-port) {
@@ -83,16 +87,19 @@
     color: $color-white;
     z-index: 10;
     position: absolute;
-    bottom: 10rem;
+    bottom: 15rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
 
     @include responsive(tab-port) {
       bottom: 8rem;
     }
 
     .scroll {
+      font-weight: 500;
+      letter-spacing: 1px;
       position: relative;
+      text-transform: uppercase;
     }
 
     svg {
@@ -101,10 +108,9 @@
       @include centered;
       top: 4rem;
 
-
       .arrow {
         fill: $color-white !important;
-        animation: scroll .6s ease-out alternate infinite;
+        animation: scroll 0.6s ease-out alternate infinite;
       }
     }
   }
@@ -133,7 +139,7 @@
   opacity: 0;
 }
 
-.bk-img {
+.bg-img {
   position: absolute;
   width: 100vw;
   height: 95vh;

@@ -75,7 +75,6 @@ body {
     display: block;
     font-size: 3.2rem;
     font-weight: 300;
-    animation: reveal 0.5s ease-out normal;
 
     @include responsive(phone) {
       font-size: 1.9rem;
@@ -85,7 +84,6 @@ body {
     span {
       border-bottom: 2px solid $color-white;
       font-style: italic;
-      animation: reveal 0.5s ease-out;
     }
   }
 
@@ -146,6 +144,10 @@ body {
   @include responsive(phone) {
     font-size: 3.5rem;
   }
+
+  &.light {
+    color: $color-white;
+  }
 }
 
 .heading-tertiary {
@@ -155,6 +157,10 @@ body {
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.2;
+
+  &.light {
+    color: $color-white;
+  }
 }
 
 .paragraph {

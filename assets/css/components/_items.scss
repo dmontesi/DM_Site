@@ -15,13 +15,16 @@
 
   &__item {
     display: flex;
-    // align-items: baseline;
-    // justify-content: center;
     gap: 1rem;
     
     color: $color-secondary;
     font-size: var(--ff-small);
     text-align: center;
-    text-decoration: underline;
+  }
+
+  &__heading {
+    font-weight: 500;
+    color: $color-secondary-dark;
+    text-transform: uppercase;
   }
 }

@@ -1,11 +1,10 @@
-
 #navbar {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0rem;
-	width: 100%;
-	z-index: 1000;
-	transition: 0.5s;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.5s;
 }
 
 .navigation {
@@ -35,7 +34,7 @@
 
       a:link,
       a:visited {
-        font-weight: 400;
+        font-weight: 500;
         padding: 3rem 2.5rem;
         font-size: var(--ff-small);
         color: $color-secondary-dark;
