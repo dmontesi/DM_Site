@@ -51,7 +51,7 @@
         <app-card />
       </div>
     </section>
-    <section id="contact" class="section contact bg-light text-image">
+    <section id="contact" class="section contact text-image">
       <div class="grid">
         <div class="text-image__header col-4">
           <h2 class="heading-secondary">
