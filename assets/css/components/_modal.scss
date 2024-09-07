@@ -51,6 +51,7 @@
     &__featuredImage {
         width: 100%;
         aspect-ratio: 7/5;
+        max-height: 500px;
         object-fit: cover;
     
         @include responsive(phone) {

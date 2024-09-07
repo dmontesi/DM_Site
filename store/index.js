@@ -34,8 +34,8 @@ export const state = () => ({
       image: 'wilson-small',
       imageLg: 'wilson',
       thumbnails: [
-        require('~/assets/images/wilson-2.png'),
-        require('~/assets/images/wilson-small.jpg')
+        require('~/assets/images/wilson-small.jpg'),
+        require('~/assets/images/wilson-2.jpg')
       ],
       url: 'https://wilsongrouppm.com/',
       target: '_blank',
@@ -50,6 +50,7 @@ export const state = () => ({
       title: 'This Site',
       description:
         'I rebuilt this site using Nuxt.js and Vue for having more options to add new features in the future.',
+      modalDescription: 'My own portfolio website.',
       alt: 'Dan Montesinos Web Development',
       image: 'hero-sm',
       imageLg: 'hero-md',
@@ -66,6 +67,7 @@ export const state = () => ({
       title: 'Cedar Place',
       description:
         'Somerville’s condominium home community, wireframed and put together entirely from scratch.',
+      modalDescription: 'Cedar Place offers an array of fine residences for every taste. Twenty-two distinctive townhomes, duplexes and flats encircle a landscaped common gathering space, thoughtfully designed to blend with the surrounding urban streetscape.',
       alt: 'Cedar Place Condominiums',
       image: 'cedar-small',
       imageLg: 'cedar',
@@ -82,6 +84,7 @@ export const state = () => ({
       title: 'InFocus Real Estate Marketing',
       description:
         'Website Design & Responsive Web Development for InFocus RE Marketing.',
+      modalDescription: 'InFocus Real Estate Marketing is a full-service marketing agency that specializes in real estate marketing. They offer a wide range of services to help real estate agents and brokers market their listings and grow their businesses.',
       alt: 'Real Estate Marketing',
       image: 'infocus',
       imageLg: 'infocus',
@@ -112,14 +115,14 @@ export const state = () => ({
       title: 'Post-War CD',
       description:
         'Design for Last Builders Of Empire\'s Limited Edition Album "Post-War"',
+      modalDescription: 'The CD comes in a custom made letterpress jacket, with two inserts for credits and reviews, and stickers. This is a limited run of only 100 discs, hand numbered by the band.',
       alt: 'Furniture',
       image: 'lboe-small',
       imageLg: 'lboe',
       thumbnails: [
         require('~/assets/images/lboe.jpg'),
-        require('~/assets/images/lboe-2.png'),
-        require('~/assets/images/lboe-3.png'),
-        require('~/assets/images/lboe-4.png')
+        require('~/assets/images/lboe-2.jpg'),
+        require('~/assets/images/lboe-4.jpg')
       ],
       url: 'https://www.behance.net/gallery/67382723/Digipak-CD-Sleeves-Last-Builders-Of-Empire-Post-War',
       cta: 'Visit Page →',
@@ -132,9 +135,16 @@ export const state = () => ({
     {
       title: 'Daily Menus',
       description: 'Culinary School Daily Menus. UNEY, Venezuela.',
+      modalDescription: 'Daily Menus for the Culinary School at UNEY, Venezuela.',
       alt: 'Furniture',
       image: 'menus-small',
       imageLg: 'menus',
+      thumbnails: [
+        require('~/assets/images/menus.jpg'),
+        require('~/assets/images/menus-2.jpg'),
+        require('~/assets/images/menus-4.jpg'),
+        require('~/assets/images/menus-3.jpg')
+      ],
       url: 'https://www.behance.net/gallery/46365033/Daily-Menus',
       cta: 'Visit Page →',
       target: '_blank',

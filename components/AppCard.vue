@@ -59,15 +59,7 @@
     <AppModal v-if="showModal" :show="showModal" @close="showModal = false">
       <div class="modal-card-content">
         <!-- Featured Image -->
-        <img v-if="currentImage" :src="currentImage" class="modal__featuredImage lazyload" :alt="currentImage.alt">
-        <picture v-else>
-          <source
-            :data-srcset="require(`~/assets/images/${selectedCard.imageLg}.jpg`)"
-            media="(min-width:56.25em)"
-            type="image/jpg"
-          >
-          <img :data-src="require(`~/assets/images/${selectedCard.image}.jpg`)" class="modal__featuredImage lazyload" :alt="selectedCard.alt">
-        </picture>
+        <img :src="currentImage" class="modal__featuredImage lazyload" alt="Featured Image">
 
         <!-- Thumbnails -->
         <div class="thumbnail-gallery">
@@ -130,6 +122,7 @@ export default {
   methods: {
     openModal (post) {
       this.selectedCard = post
+      this.currentImage = require(`~/assets/images/${post.image}.jpg`) // Set initial featured image
       this.showModal = true
     },
     setFeaturedImage (thumbnail) {
