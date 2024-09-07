@@ -7,9 +7,12 @@
     </div>
 
     <select v-model="selected" class="work__list filter" aria-label="Select">
-      <option disabled value="">
-        Filter by Category
+      <!-- "All Categories" Option -->
+      <option value="">
+        All Categories
       </option>
+
+      <!-- Category Options -->
       <option v-for="category in categories" :key="category">
         {{ category }}
       </option>
@@ -114,6 +117,8 @@ export default {
   computed: {
     ...mapState(['posts', 'categories']),
     filteredLabel () {
+      if (!this.selected) { return this.posts }
+
       const filter = new RegExp(this.selected, 'i')
       return this.posts.filter(el => el.label.match(filter))
     }
