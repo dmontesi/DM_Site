@@ -61,12 +61,6 @@
 		display: flex;
 		align-items: center;
 		gap: .5rem;
-
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0;
-		}
 	}
 
 	&__icon {

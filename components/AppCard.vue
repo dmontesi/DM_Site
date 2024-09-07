@@ -23,6 +23,7 @@
           class="card bg-dark"
           data-aos="fade-up"
           data-aos-duration="500"
+          @click="openModal(post)"
         >
           <picture>
             <source
@@ -30,10 +31,7 @@
               media="(min-width:56.25em)"
               type="image/jpg"
             >
-            <img
-              :data-src="require(`~/assets/images/${post.image}.jpg`)"
-              class="card__img lazyload"
-            >
+            <img :data-src="require(`~/assets/images/${post.image}.jpg`)" class="card__img lazyload">
           </picture>
 
           <div class="card__content">
@@ -48,26 +46,55 @@
             </p>
           </div>
           <div class="card__footer">
-            <a
-              :href="post.url"
-              :target="post.target"
-              rel="noreferrer"
-              class="card__cta text-link"
-              aria-label="Visit link"
-            >{{ post.cta }}
-              <span
-                v-if="post.external"
-                class="card__icon"
-              ><ph-arrow-square-out :size="20" /></span></a>
             <div class="card__labels">
-              <span v-for="el in post.labels" :key="el.label">
-                {{ el }}
-              </span>
+              <span v-for="el in post.labels" :key="el.label">{{ el }}</span>
             </div>
+            <span>Created using:</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Modal Component -->
+    <AppModal v-if="showModal" :show="showModal" @close="showModal = false">
+      <div class="modal-card-content">
+        <!-- Featured Image -->
+        <img v-if="currentImage" :src="currentImage" class="modal__featuredImage lazyload" :alt="currentImage.alt">
+        <picture v-else>
+          <source
+            :data-srcset="require(`~/assets/images/${selectedCard.imageLg}.jpg`)"
+            media="(min-width:56.25em)"
+            type="image/jpg"
+          >
+          <img :data-src="require(`~/assets/images/${selectedCard.image}.jpg`)" class="modal__featuredImage lazyload" :alt="selectedCard.alt">
+        </picture>
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-gallery">
+          <img
+            v-for="(thumbnail, index) in selectedCard.thumbnails"
+            :key="index"
+            :src="thumbnail"
+            class="thumbnail-image"
+            alt="Thumbnail"
+            @click="setFeaturedImage(thumbnail)"
+          >
+        </div>
+
+        <div class="modal__text">
+          <h3 class="heading-tertiary">
+            {{ selectedCard.title }}
+          </h3>
+          <p class="paragraph">
+            {{ selectedCard.modalDescription }}
+          </p>
+          <a :href="selectedCard.url" :target="selectedCard.target" class="card__cta text-link">
+            {{ selectedCard.cta }}
+            <span v-if="selectedCard.external" class="card__icon"><ph-arrow-square-out :size="20" /></span>
+          </a>
+        </div>
+      </div>
+    </AppModal>
   </div>
 </template>
 
@@ -75,14 +102,19 @@
 import { mapState } from 'vuex'
 import { PhArrowSquareOut } from 'phosphor-vue'
 import aosMixin from '~/mixins/aos'
+import AppModal from '~/components/AppModal.vue'
 
 export default {
   components: {
-    PhArrowSquareOut
+    PhArrowSquareOut,
+    AppModal
   },
   mixins: [aosMixin],
   data () {
     return {
+      showModal: false,
+      selectedCard: null,
+      currentImage: null, // Store the currently displayed image
       selected: ''
     }
   },
@@ -92,6 +124,16 @@ export default {
     filteredLabel () {
       const filter = new RegExp(this.selected, 'i')
       return this.posts.filter(el => el.label.match(filter))
+    }
+  },
+
+  methods: {
+    openModal (post) {
+      this.selectedCard = post
+      this.showModal = true
+    },
+    setFeaturedImage (thumbnail) {
+      this.currentImage = thumbnail
     }
   }
 }

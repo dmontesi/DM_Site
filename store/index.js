@@ -1,16 +1,42 @@
 export const state = () => ({
   page: 'index',
-  technologies: ['HTML', 'CSS', 'SCSS', 'Javascript (ES6)', 'Twig', 'Vue.js', 'Vuex', 'Vue CLI', 'Tailwind', 'Bootstrap', 'Wordpress', 'Craft CMS', 'Git', 'GitHub', 'GitLab', 'Pantheon', 'Adobe CC', 'Adobe XD', 'Zeplin', 'Affinity Studio'],
+  technologies: [
+    'HTML',
+    'CSS',
+    'SCSS',
+    'Javascript (ES6)',
+    'Twig',
+    'Vue.js',
+    'Vuex',
+    'Vue CLI',
+    'Tailwind',
+    'Bootstrap',
+    'Wordpress',
+    'Craft CMS',
+    'Git',
+    'GitHub',
+    'GitLab',
+    'Pantheon',
+    'Adobe CC',
+    'Adobe XD',
+    'Zeplin',
+    'Affinity Studio'
+  ],
   selected: 'Filter by category',
   categories: ['website', 'graphic design', 'ux-design'],
   posts: [
     {
       title: 'Wilson Group',
       description:
-        'Static Property Management Website for Wilson Group built entirely on HTML and SCSS',
+        'Static Property Management Website for Wilson Group Property Management built entirely on HTML and SCSS',
+      modalDescription: 'The Wilson Group brings over 15 years of experience, knowledge and skill to managing real property. ',
       alt: 'Wilson Group Property Management',
       image: 'wilson-small',
       imageLg: 'wilson',
+      thumbnails: [
+        require('~/assets/images/wilson-2.png'),
+        require('~/assets/images/wilson-small.jpg')
+      ],
       url: 'https://wilsongrouppm.com/',
       target: '_blank',
       external: true,
@@ -33,7 +59,7 @@ export const state = () => ({
       cta: 'View on Github',
       year: 2019,
       label: 'website',
-      labels: ['Nuxt.js', 'Vue.js', 'SCSS'],
+      labels: ['Nuxt.js', 'Vue.js', 'ES6', 'SCSS'],
       featured: false
     },
     {
@@ -59,7 +85,7 @@ export const state = () => ({
       alt: 'Real Estate Marketing',
       image: 'infocus',
       imageLg: 'infocus',
-      url: 'https://infocusremarketing.com/',
+      url: 'https://infocusremarketing.web.app',
       external: true,
       target: '_blank',
       cta: 'Visit Website',
@@ -70,8 +96,7 @@ export const state = () => ({
     },
     {
       title: 'Furniture Website Mockup',
-      description:
-        'Website & Mobile app for fictional furniture store.',
+      description: 'Website & Mobile app for fictional furniture store.',
       alt: 'Furniture',
       image: 'maynooth-small',
       imageLg: 'maynooth',
@@ -90,6 +115,12 @@ export const state = () => ({
       alt: 'Furniture',
       image: 'lboe-small',
       imageLg: 'lboe',
+      thumbnails: [
+        require('~/assets/images/lboe.jpg'),
+        require('~/assets/images/lboe-2.png'),
+        require('~/assets/images/lboe-3.png'),
+        require('~/assets/images/lboe-4.png')
+      ],
       url: 'https://www.behance.net/gallery/67382723/Digipak-CD-Sleeves-Last-Builders-Of-Empire-Post-War',
       cta: 'Visit Page →',
       target: '_blank',
@@ -100,8 +131,7 @@ export const state = () => ({
     },
     {
       title: 'Daily Menus',
-      description:
-        'Culinary School Daily Menus. UNEY, Venezuela.',
+      description: 'Culinary School Daily Menus. UNEY, Venezuela.',
       alt: 'Furniture',
       image: 'menus-small',
       imageLg: 'menus',
@@ -115,8 +145,7 @@ export const state = () => ({
     },
     {
       title: 'Book Design',
-      description:
-        'Student\'s Community Service Law',
+      description: "Student's Community Service Law",
       alt: 'Furniture',
       image: 'ldsc-book-small',
       imageLg: 'ldsc-book',
